@@ -26,3 +26,6 @@
   * 記事の内容(固定)
   * サムネや背景画像(固定)
   * 特殊な見た目(コードブロック、引用ブロック)
+
+  下記ファイル構成
+  /Users/abetatsurou/Documents/PJ/Q/techlab-clone/img/ファイル構成図.png
