@@ -8,6 +8,12 @@ const GlobalStyles = () => (
     styles={css`
       body {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: white;
+        background-color: red;
+      },
+      button {
+        color: red;
+        background-color: blue;
       }
     `}
   />

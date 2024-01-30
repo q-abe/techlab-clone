@@ -19,15 +19,15 @@ export const Button: FC<ButtonProps> = (props) => {
   } = props;
 
   const buttonStyle = css`
-    color: red;
+    background-color: red;
+    color: "pink"
+    backgroundolor: backgroundColor
   `;
 
   return (
     <div>
-      <button css={buttonStyle}>
-        {/* {label} */}
-        aaaaaaaa
-      </button>
+      <button>Button Text</button>
+      <p>文字</p>
     </div>
   );
 };

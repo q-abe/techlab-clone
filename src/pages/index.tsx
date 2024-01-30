@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div>
       <Button onClick={() => { }} />
+      <p>文字</p>
     </div>
   );
 }
