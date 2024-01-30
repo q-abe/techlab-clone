@@ -15,21 +15,18 @@ export const Button: FC<ButtonProps> = (props) => {
     backgroundColor,
     primary,
     label,
-    color
+    color,
   } = props;
+
   const buttonStyle = css`
-    color: rgba(217, 33, 33, 1);
+    color: red;
   `;
 
   return (
     <div>
       <button css={buttonStyle}>
-        {label}
-        <style jsx>{`
-          button {
-            background-color: ${backgroundColor};
-          }
-        `}</style>
+        {/* {label} */}
+        aaaaaaaa
       </button>
     </div>
   );
