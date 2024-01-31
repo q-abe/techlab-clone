@@ -28,7 +28,7 @@ export const Button: FC<ButtonProps> = (props) => {
       height: 11px;
       //矢印位置
       position: absolute;
-      top: 50%;
+      top: 25px;
       right: 20px;
       transform: translateY(-50%) rotate(45deg); //rotate()で回転
       }
