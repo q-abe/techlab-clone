@@ -19,12 +19,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: "PrimaryButton",
+    // label: "PrimaryButton",
+    label: "全記事一覧",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: "SecondaryButton",
+    label: "シリーズ連載一覧",
   },
 };

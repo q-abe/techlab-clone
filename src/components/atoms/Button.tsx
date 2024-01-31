@@ -18,6 +18,7 @@ export const Button: FC<ButtonProps> = (props) => {
     display: inline-block;
     padding: 8px 35px 8px 20px; //上右下左
     border: none;
+    margin: 0 auto;
     &:after{
       content: '';
       border: 0;
@@ -27,16 +28,18 @@ export const Button: FC<ButtonProps> = (props) => {
       width: 11px;
       height: 11px;
       //矢印位置
-      position: absolute;
       top: 25px;
       right: 20px;
-      transform: translateY(-50%) rotate(45deg); //rotate()で回転
+      transform: translateX(20px) translateY(1px) rotate(45deg); //rotate()で回転
       }
     :hover {
       color: #909090;
       background: #e4e4e4;
-      border-color: #909090;
       cursor: pointer;
+        ::after {
+          border-color: #909090;
+
+        }
     }
   `;
 
