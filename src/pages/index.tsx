@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Button } from "../components/atoms/Button";
+import { Button } from "@/components/atoms/Button";
 
 export default function Home() {
   return (
     <div>
-      <Button onClick={() => { }} />
+      <Button label={"aa"}/>
       <p>文字</p>
     </div>
   );
