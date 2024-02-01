@@ -4,7 +4,7 @@ import { Global as EmotionGlobal, css } from "@emotion/react";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 
 const GlobalStyles = () => (
-    //TODO；デフォルトスタイル打ち消し対応。
+    //TODO；要修正(デフォルトスタイルにフォントが負けていて効いていない)
   <EmotionGlobal
     styles={css`
         body {
