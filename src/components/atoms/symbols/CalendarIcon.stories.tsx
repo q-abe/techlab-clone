@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type {Meta, StoryObj} from "@storybook/react";
 
-import {　CalendarIcon　} from "./CalendarIcon";
+import {CalendarIcon} from "./CalendarIcon";
 
 const meta = {
     title: "SearchBar",
@@ -9,10 +9,13 @@ const meta = {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-    },
+    argTypes: {},
 } satisfies Meta<typeof CalendarIcon>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
+export const calendar: Story = {
+    args: {}
+}
