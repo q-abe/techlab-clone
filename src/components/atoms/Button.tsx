@@ -26,7 +26,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
   return (
     <div>
-      <button>Button Text</button>
+      <button>シリーズ記事一覧</button>
       <p>文字</p>
     </div>
   );
