@@ -1,10 +1,9 @@
-import {css, SerializedStyles} from "@emotion/react";
-import React, {FC} from "react";
-import {ArrowIcon} from "./symbols/ArrowIcon";
+import { css, SerializedStyles } from "@emotion/react";
+import React, { FC } from "react";
+import { ArrowIcon } from "./symbols/ArrowIcon";
 
 type ButtonProps = {
     label: string;
-    buttonStyle: string;
     onClick: () => void
 };
 
@@ -35,7 +34,7 @@ export const Button: FC<ButtonProps> = (props) => {
         top: 25px;
         right: 20px;
         position: absolute;
-        transform: translateX(14px) translateY(-16px)
+        transform: translate(14px, -16px);
     `
 
     return (

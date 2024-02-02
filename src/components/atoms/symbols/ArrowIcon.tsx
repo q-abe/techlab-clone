@@ -1,14 +1,8 @@
-import React, {FC} from "react";
-import {css} from "@emotion/react";
+import React, { FC } from "react";
+import { css } from "@emotion/react";
 
 
 export const ArrowIcon: FC<React.SVGProps<SVGSVGElement>> = (props) => {
-    const AllowStyle = ({props}: { props: string }) => css`
-        width: 20px;
-        height: 20px;
-        ${props}
-    `
-    
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
