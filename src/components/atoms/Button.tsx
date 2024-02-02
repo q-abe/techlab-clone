@@ -20,28 +20,27 @@ export const Button: FC<ButtonProps> = (props) => {
         background-color: #DDDDDD;
         cursor: pointer;
         display: inline-block;
-        padding: 8px 35px 8px 20px; //上右下左
+        padding: 8px 10px 8px 20px; //上右下左
         border: none;
         margin: 0 auto;
-        position: relative;
+        outline: none;
 
         :hover {
             opacity: 0.7;
         }
     `;
 
-    const ArrowStyle = css`
-        top: 25px;
-        right: 20px;
-        position: absolute;
-        transform: translate(14px, -16px);
+    const arrowStyle = css`
+        margin-left: 30px;
+        margin-right: 0;
+        vertical-align: sub
     `
 
     return (
         <div>
             <button css={buttonStyle} onClick={onClick}>
                 {label}
-                <ArrowIcon css={ArrowStyle}/>
+                <ArrowIcon css={arrowStyle} direction={"right"} rotateNum={0}/>
             </button>
         </div>
     );
