@@ -27,6 +27,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
         :hover {
             opacity: 0.7;
+            transition: opacity 500ms;
         }
     `;
 
