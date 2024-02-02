@@ -1,23 +1,21 @@
 import type {Meta, StoryObj} from "@storybook/react";
 
-import {RightAllowIcon} from "./RightAllowIcon";
+import {ArrowIcon} from "./ArrowIcon";
 
 const meta = {
-    title: "RightAllowIcon",
-    component: RightAllowIcon,
+    title: "ArrowIcon",
+    component: ArrowIcon,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof RightAllowIcon>;
+} satisfies Meta<typeof ArrowIcon>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const RightAllow: Story = {
-    args: {
-        label: ""
-    }
+export const RightArrow: Story = {
+    args: {}
 };
