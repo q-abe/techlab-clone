@@ -1,6 +1,9 @@
 import React, { FC } from "react";
 import { css } from "@emotion/react";
 
+type CloseProps = {
+    onClick?: () => {}
+}
 
 const crossButton = css`
     cursor: pointer;
@@ -44,10 +47,12 @@ const crossButton = css`
     }
 `
 
-export const CloseIcon: FC<React.SVGProps<SVGElement>> = (props) => {
+export const CloseIcon: FC<CloseProps> = (props) => {
+    const { onClick } = props;
     return (
         <div>
-            <button css={crossButton}>
+            <button css={crossButton} onClick={() => {
+            }} {...props}>
                 ×
             </button>
         </div>
