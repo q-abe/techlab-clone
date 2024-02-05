@@ -1,11 +1,13 @@
 import React, { FC } from "react";
 
-type SerachIconProps = {};
-
-export const SerachIcon: FC<SerachIconProps> = (props) => {
+export const SearchIcon: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
-            <svg id="search" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 19.161 26.036"
+            <svg id="search"
+                 xmlns="http://www.w3.org/2000/svg"
+                 width="100%"
+                 height="auto"
+                 viewBox="0 0 19.161 26.036"
                  stroke="#000">
                 <g id="icon" transform="translate(-956.685 -27.324)">
                     <g id="グループ_266" data-name="グループ 266">

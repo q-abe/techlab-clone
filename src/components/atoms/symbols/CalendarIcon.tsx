@@ -1,10 +1,6 @@
-import React, {FC} from "react";
+import React, { FC } from "react";
 
-type CalendarIconProps = {};
-
-export const CalendarIcon: FC<CalendarIconProps> = (props) => {
-    const {} = props;
-
+export const CalendarIcon: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 32 32.587" fill="#adadad">
             <g id="グループ_253" data-name="グループ 253" transform="translate(-6.5 -6.206)">

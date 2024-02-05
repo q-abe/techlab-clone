@@ -1,8 +1,6 @@
 import React, { FC } from "react";
 
-type QImgLogoProps = {};
-
-export const QImgLogo: FC<QImgLogoProps> = (props) => {
+export const QImgLogo: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 56 59.123" fill="#D7000F">

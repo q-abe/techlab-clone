@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { SerachIcon } from "./SerachIcon";
+import { SearchIcon } from "./SearchIcon";
 
 const meta = {
-    title: "SerachIcon",
-    component: SerachIcon,
+    title: "SearchIcon",
+    component: SearchIcon,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof SerachIcon>;
+} satisfies Meta<typeof SearchIcon>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Serach: Story = {}
+export const Search: Story = {}

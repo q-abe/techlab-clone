@@ -1,24 +1,12 @@
-import React, {FC} from "react";
-import {css} from "@emotion/react";
+import React, { FC } from "react";
 
-type QTextLogoProps = {
-    backgroundColor: string
-};
-
-export const QTextLogo: FC<QTextLogoProps> = (props) => {
-    const {backgroundColor} = props;
-
-    const QTextLogoStyle = css`
-        background-color: ${backgroundColor};
-        cursor: pointer;
-    `
+export const QTextLogo: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
             <svg xmlns="http://www.w3.org/2000/svg"
                  width="100%"
                  height="auto"
                  viewBox="0 0 104.884 35.273"
-                 css={QTextLogoStyle}
             >
                 <title>TechQLab(テックラボ)</title>
                 <g id="グループ_610" data-name="グループ 610" transform="translate(-374.071 -1153.509)">

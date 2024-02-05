@@ -1,10 +1,7 @@
-import React, {FC} from "react";
-import {css} from "@emotion/react";
+import React, { FC } from "react";
+import { css } from "@emotion/react";
 
-type ArticleTitleTextProps = {};
-
-export const ArticleTitleText: FC<ArticleTitleTextProps> = (props) => {
-    const {} = props;
+export const ArticleTitleText: FC<React.SVGProps<SVGElement>> = (props) => {
 
     const textStyle = css`
         color: #A0C5E8;

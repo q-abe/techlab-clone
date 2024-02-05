@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 
-type TagIconProps = {};
-
-export const TagIcon: FC<TagIconProps> = (props) => {
-    const {} = props;
-
+export const TagIcon: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" viewBox="0 0 49.029 24" fill="#adadad">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="100%"
+                 height="auto"
+                 viewBox="0 0 49.029 24"
+                 fill="#adadad">
                 <g id="グループ_251" data-name="グループ 251" transform="translate(-6.5 -14.668)">
                     <g id="グループ_250" data-name="グループ 250" transform="translate(6.5 14.668)">
                         <rect id="長方形_121" data-name="長方形 121" width="6.42" height="24"></rect>
