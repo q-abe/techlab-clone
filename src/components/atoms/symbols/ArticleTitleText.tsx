@@ -1,7 +1,12 @@
-import React, { FC } from "react";
+import React, { FC, SVGProps } from "react";
 import { css } from "@emotion/react";
 
-export const ArticleTitleText: FC<React.SVGProps<SVGElement>> = (props) => {
+type TitleProps = {
+    onClick?: () => {};
+};
+
+export const ArticleTitleText: FC<TitleProps> = (props) => {
+    const { onClick, } = props;
 
     const textStyle = css`
         color: #A0C5E8;
@@ -9,7 +14,9 @@ export const ArticleTitleText: FC<React.SVGProps<SVGElement>> = (props) => {
 
     return (
         <div>
-            <p css={textStyle}>記事タイトル文字</p>
+            <p
+                css={textStyle} onClick={onClick} {...props}>
+                記事タイトル文字</p>
         </div>
     );
 };

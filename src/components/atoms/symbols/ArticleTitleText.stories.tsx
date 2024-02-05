@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import {ArticleTitleText} from "./ArticleTitleText";
+import { ArticleTitleText } from "./ArticleTitleText";
 
 const meta = {
     title: "SearchBar",
@@ -17,7 +17,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Text: Story = {
-    args: {
-        label: "記事タイトルのテキスト"
-    },
+    args: {},
 };
