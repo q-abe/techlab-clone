@@ -3,11 +3,11 @@ import { css } from "@emotion/react";
 
 type ArrowIconProps = {
     direction: "right" | "left" | "upward" | "downward" | "custom";
-    rotateNum: number;
+    rotateNum?: number | 0;
 }
 
 export const ArrowIcon: FC<ArrowIconProps> = (props) => {
-    const { direction, rotateNum } = props;
+    const { direction, rotateNum = 0 } = props;
     const getDegree = (direction: string, rotateNum: number) => {
         switch (direction) {
             case "right":

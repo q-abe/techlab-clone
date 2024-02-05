@@ -36,7 +36,6 @@ export const Button: FC<ButtonProps> = (props) => {
         margin-right: 0;
         vertical-align: sub
     `
-
     return (
         <div>
             <button css={buttonStyle} onClick={onClick}>
