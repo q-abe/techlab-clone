@@ -40,9 +40,9 @@ export const downwardArrow: Story = {
     }
 };
 
-export const cystomArrow: Story = {
+export const customArrow: Story = {
     args: {
         direction: "custom",
-        rotateNum: 0,
+        rotateNum: 60,
     }
 };
