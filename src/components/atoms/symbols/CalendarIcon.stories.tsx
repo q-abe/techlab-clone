@@ -1,9 +1,9 @@
-import type {Meta, StoryObj} from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import {CalendarIcon} from "./CalendarIcon";
+import { CalendarIcon } from "./CalendarIcon";
 
 const meta = {
-    title: "SearchBar",
+    title: "CalendarIcon",
     component: CalendarIcon,
     parameters: {
         layout: "centered",
