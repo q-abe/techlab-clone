@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
 
-import {ArrowIcon} from "./ArrowIcon";
+import { ArrowIcon } from "./ArrowIcon";
 
 const meta = {
     title: "ArrowIcon",
@@ -17,5 +17,32 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const RightArrow: Story = {
-    args: {}
+    args: {
+        direction: "right",
+    }
+};
+
+export const leftArrow: Story = {
+    args: {
+        direction: "left",
+    }
+};
+
+export const upwardArrow: Story = {
+    args: {
+        direction: "upward",
+    }
+};
+
+export const downwardArrow: Story = {
+    args: {
+        direction: "downward",
+    }
+};
+
+export const cystomArrow: Story = {
+    args: {
+        direction: "custom",
+        rotateNum: 0,
+    }
 };
