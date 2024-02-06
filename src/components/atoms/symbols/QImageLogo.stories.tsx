@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { QImgLogo } from "./QImgLogo";
+import { QImageLogo } from "./QImageLogo";
 
 const meta = {
-    title: "atoms/symbol/QImgLogo",
-    component: QImgLogo,
+    title: "atoms/symbol/QImageLogo",
+    component: QImageLogo,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof QImgLogo>;
+} satisfies Meta<typeof QImageLogo>;
 
 export default meta;
 

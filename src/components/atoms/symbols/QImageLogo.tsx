@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-export const QImgLogo: FC<React.SVGProps<SVGElement>> = (props) => {
+export const QImageLogo: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
             <svg width="100%" height="auto"
