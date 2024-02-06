@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { SearchBar } from "./SearchBar";
 
 const meta = {
-    title: "SearchBar",
+    title: "molecules/SearchBar",
     component: SearchBar,
     parameters: {
         layout: "centered",
@@ -24,7 +24,7 @@ export const Input: Story = {
     },
     parameters: {
         backgrounds: {
-            default: "dark"　//TODO：カタログごとの背景色が指定されない。
+            default: "dark"
         }
     }
 }
