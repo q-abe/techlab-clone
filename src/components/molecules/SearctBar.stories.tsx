@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+
 import { SearchBar } from "./SearchBar";
 
 const meta = {
@@ -9,10 +10,21 @@ const meta = {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-    },
+    argTypes: {},
 } satisfies Meta<typeof SearchBar>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
+export const Input: Story = {
+    args: {
+        onClick: () => {
+        }
+    },
+    parameters: {
+        backgrounds: {
+            default: "dark"　//TODO：カタログごとの背景色が指定されない。
+        }
+    }
+}
