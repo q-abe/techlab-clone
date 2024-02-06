@@ -3,7 +3,8 @@ import React, { FC } from "react";
 export const QImageLogo: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
-            <svg width="100%" height="auto"
+            <svg width="44px"
+                 height="46.45px"
                  viewBox="0 0 56 59.123"
                  fill="#D7000F"
                  {...props}

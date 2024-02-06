@@ -25,8 +25,8 @@ const crossButton = css`
         position: absolute;
         left: 0;
         top: 0;
-        height: 140%;
-        width: 100%;
+        width: 20px;
+        height: 20px;
         display: block;
         border-left: 1px solid #FFFFFF;
         transform-origin: left top;
@@ -38,8 +38,8 @@ const crossButton = css`
         position: absolute;
         right: 0;
         top: 0;
-        height: 140%;
-        width: 100%;
+        width: 20px;
+        height: 20px;
         display: block;
         border-right: 1px solid #FFFFFF;
         transform-origin: right top;

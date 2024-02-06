@@ -4,8 +4,8 @@ export const QTextLogo: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
             <svg
-                width="100%"
-                height="auto"
+                width="80px"
+                height="26.89px"
                 viewBox="0 0 104.884 35.273"
                 {...props}
             >

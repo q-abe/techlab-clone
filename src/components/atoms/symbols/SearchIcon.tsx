@@ -4,8 +4,8 @@ export const SearchIcon: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
             <svg
-                width="100%"
-                height="auto"
+                width="20px"
+                height="27.17px"
                 viewBox="0 0 19.161 26.036"
                 stroke="#000"
                 {...props}

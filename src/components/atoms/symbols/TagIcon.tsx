@@ -4,8 +4,8 @@ export const TagIcon: FC<React.SVGProps<SVGElement>> = (props) => {
     return (
         <div>
             <svg
-                width="100%"
-                height="auto"
+                width="24.99px"
+                height="12.23px"
                 viewBox="0 0 49.029 24"
                 fill="#adadad"
                 {...props}
