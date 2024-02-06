@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { CloseIcon } from "../symbols/CloseIcon";
+import { CalendarIcon } from "./CalendarIcon";
 
 const meta = {
-    title: "atoms/symbol/CloseIcon",
-    component: CloseIcon,
+    title: "atoms/symbol/CalendarIcon",
+    component: CalendarIcon,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof CloseIcon>;
+} satisfies Meta<typeof CalendarIcon>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Cross: Story = {
+export const calendar: Story = {
     args: {}
 }

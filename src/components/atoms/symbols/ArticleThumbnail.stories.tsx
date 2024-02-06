@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ArticleThumbnail } from "../symbols/ArticleThumbnail";
+import { ArticleThumbnail } from "./ArticleThumbnail";
 
 const meta = {
     title: "atoms/symbol/ArticleThumbnail",

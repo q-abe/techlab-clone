@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { CalendarIcon } from "../symbols/CalendarIcon";
+import { ArticleTitleText } from "./ArticleTitleText";
 
 const meta = {
-    title: "atoms/symbol/CalendarIcon",
-    component: CalendarIcon,
+    title: "atoms/symbol/SearchBar",
+    component: ArticleTitleText,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof CalendarIcon>;
+} satisfies Meta<typeof ArticleTitleText>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const calendar: Story = {
-    args: {}
-}
+export const Text: Story = {
+    args: {},
+};
