@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { QImgLogo } from "./QImgLogo";
 
 const meta = {
-    title: "QImgLogo",
+    title: "atoms/symbol/QImgLogo",
     component: QImgLogo,
     parameters: {
         layout: "centered",

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { SearchIcon } from "./SearchIcon";
 
 const meta = {
-    title: "SearchIcon",
+    title: "atoms/symbol/SearchIcon",
     component: SearchIcon,
     parameters: {
         layout: "centered",

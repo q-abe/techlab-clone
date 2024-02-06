@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ArticleTitleText } from "./ArticleTitleText";
 
 const meta = {
-    title: "SearchBar",
+    title: "atoms/symbol/SearchBar",
     component: ArticleTitleText,
     parameters: {
         layout: "centered",

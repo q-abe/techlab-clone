@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TagIcon } from "./TagIcon";
 
 const meta = {
-    title: "TagIcon",
+    title: "atoms/symbol/TagIcon",
     component: TagIcon,
     parameters: {
         layout: "centered",

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ArrowIcon } from "./ArrowIcon";
 
 const meta = {
-    title: "ArrowIcon",
+    title: "atoms/symbol/ArrowIcon",
     component: ArrowIcon,
     parameters: {
         layout: "centered",

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { CloseIcon } from "./CloseIcon";
 
 const meta = {
-    title: "CloseIcon",
+    title: "atoms/symbol/CloseIcon",
     component: CloseIcon,
     parameters: {
         layout: "centered",

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { QTextLogo } from "./QTextLogo";
 
 const meta = {
-    title: "QTextLogo",
+    title: "atoms/symbol/QTextLogo",
     component: QTextLogo,
     parameters: {
         layout: "centered",

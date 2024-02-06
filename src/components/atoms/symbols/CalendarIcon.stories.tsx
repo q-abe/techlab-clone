@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { CalendarIcon } from "./CalendarIcon";
 
 const meta = {
-    title: "CalendarIcon",
+    title: "atoms/symbol/CalendarIcon",
     component: CalendarIcon,
     parameters: {
         layout: "centered",
