@@ -1,19 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { TagIcon } from "./TagIcon";
+import { ArticleTitleText } from "../symbols/ArticleTitleText";
 
 const meta = {
-    title: "atoms/symbol/TagIcon",
-    component: TagIcon,
+    title: "atoms/symbol/SearchBar",
+    component: ArticleTitleText,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof TagIcon>;
+} satisfies Meta<typeof ArticleTitleText>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Tag: Story = {};
+export const Text: Story = {
+    args: {},
+};

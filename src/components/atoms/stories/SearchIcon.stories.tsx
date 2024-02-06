@@ -1,21 +1,19 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { CloseIcon } from "./CloseIcon";
+import { SearchIcon } from "../symbols/SearchIcon";
 
 const meta = {
-    title: "atoms/symbol/CloseIcon",
-    component: CloseIcon,
+    title: "atoms/symbol/SearchIcon",
+    component: SearchIcon,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof CloseIcon>;
+} satisfies Meta<typeof SearchIcon>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Cross: Story = {
-    args: {}
-}
+export const Search: Story = {}

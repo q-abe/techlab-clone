@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { QTextLogo } from "./QTextLogo";
+import { QImageLogo } from "../symbols/QImageLogo";
 
 const meta = {
-    title: "atoms/symbol/QTextLogo",
-    component: QTextLogo,
+    title: "atoms/symbol/QImageLogo",
+    component: QImageLogo,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
     argTypes: {},
-} satisfies Meta<typeof QTextLogo>;
+} satisfies Meta<typeof QImageLogo>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const ThumbnailPicture: Story = {
+export const QLogo: Story = {
     args: {},
-};
+}

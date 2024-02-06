@@ -1,17 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ArticleCard } from "./ArticleCard";
+import { Footer } from "../Footer";
 
 const meta = {
     title: "SearchBar",
-    component: ArticleCard,
+    component: Footer,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-    },
-} satisfies Meta<typeof ArticleCard>;
+    argTypes: {},
+} satisfies Meta<typeof Footer>;
 
 export default meta;
 

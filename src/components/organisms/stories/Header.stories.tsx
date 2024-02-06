@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Header } from "./Header";
+import { Header } from "../Header";
 
 const meta = {
     title: "SearchBar",
@@ -9,8 +9,7 @@ const meta = {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-    },
+    argTypes: {},
 } satisfies Meta<typeof Header>;
 
 export default meta;

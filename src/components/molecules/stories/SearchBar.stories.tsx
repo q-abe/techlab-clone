@@ -1,17 +1,16 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { HeaderModal } from "./HeaderModal";
+import { SearchBar } from "../SearchBar";
 
 const meta = {
     title: "SearchBar",
-    component: HeaderModal,
+    component: SearchBar,
     parameters: {
         layout: "centered",
     },
     tags: ["autodocs"],
-    argTypes: {
-    },
-} satisfies Meta<typeof HeaderModal>;
+    argTypes: {},
+} satisfies Meta<typeof SearchBar>;
 
 export default meta;
 
