@@ -22,4 +22,9 @@ export const Input: Story = {
         onClick: () => {
         }
     },
+    parameters: {
+        backgrounds: {
+            default: "dark"　//TODO：カタログごとの背景色が指定されない。
+        }
+    }
 }
