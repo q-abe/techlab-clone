@@ -2,11 +2,18 @@ import React, { FC, useState } from "react";
 import { ArrowIcon } from "../atoms/symbols/ArrowIcon";
 import { css } from "@emotion/react";
 
-type AccordionProps = {};
+type AccordionProps = {
+    data: {
+        id: number;
+        year: number;
+        month: number;
+        post_count: number;
+    }[];
+};
 
 export const Accordion: FC<AccordionProps> = (props) => {
-    const {} = props;
-    const [isOpen, setIsOpen] = useState(true)
+    const { data } = props;
+    const [ isOpen, setIsOpen ] = useState(false)
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
@@ -14,7 +21,7 @@ export const Accordion: FC<AccordionProps> = (props) => {
 
     return (
         <div>
-            <dl>
+            <dl css={dlStyle}>
                 <dt css={accordionStyle} onClick={toggleAccordion}>
                     <button css={accordionHeaderStyle}>
                         2024年
@@ -23,12 +30,11 @@ export const Accordion: FC<AccordionProps> = (props) => {
                 </dt>
                 <dd css={isOpen ? contentOpen : content}>
                     <ul css={listStyle}>
-                        <li>
-                            <a href="/articles/?month=2024-2">2月(1)</a>
-                        </li>
-                        <li>
-                            <a href="/articles/?month=2024-1">1月(3)</a>
-                        </li>
+                        {data.map((item, index) => (
+                            <li key={item.id}>
+                                <a href="/articles/?month=${item.year}-${item.month}">{item.month}月({item.post_count})</a>
+                            </li>
+                        ))}
                     </ul>
                 </dd>
             </dl>
@@ -37,13 +43,23 @@ export const Accordion: FC<AccordionProps> = (props) => {
     )
 }
 
-const accordionStyle = css`
+const dlStyle = css`
     margin: 0;
+    padding: 0;
+`
+
+const accordionStyle = css`
     border-bottom: 1px solid #707070;
+    width: 560px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
 `
 
 const accordionHeaderStyle = css`
-    margin: 0 0 0 5px;
+    margin: 0;
+    padding: 5px 10px;
     background: transparent;
     border: none;
     width: 560px;
@@ -52,6 +68,7 @@ const accordionHeaderStyle = css`
     font-weight: bold;
     cursor: pointer;
     font-size: 14px;
+    align-items: center;
 
     :hover {
         transition: opacity .2s ease-in-out;
@@ -66,9 +83,11 @@ const arrowStyle = css`
 `
 
 const listStyle = css`
+    max-width: 560px;
     margin: 0 0 0 3px;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 12px 14px;
     padding: 14px 8px 12px;
     font-size: 12px;
