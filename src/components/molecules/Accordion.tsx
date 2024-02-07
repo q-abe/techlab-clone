@@ -1,45 +1,48 @@
 import React, { FC, useState } from "react";
 import { ArrowIcon } from "../atoms/symbols/ArrowIcon";
 import { css } from "@emotion/react";
+import { ArticlesCounts } from "../../entity/ArticlesCountByMonthType"
 
 type AccordionProps = {
-    data: {
-        id: number;
-        year: number;
-        month: number;
-        post_count: number;
-    }[];
+    articlesCount: ArticlesCounts;
 };
 
 export const Accordion: FC<AccordionProps> = (props) => {
-    const { data } = props;
+    const { articlesCount } = props;
     const [ isOpen, setIsOpen ] = useState(false)
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
     }
-
     return (
         <div>
-            <dl css={dlStyle}>
-                <dt css={accordionStyle} onClick={toggleAccordion}>
-                    <button css={accordionHeaderStyle}>
-                        2024年
-                        <ArrowIcon direction={isOpen ? "upward" : "downward"} css={arrowStyle}/>
-                    </button>
-                </dt>
-                <dd css={isOpen ? contentOpen : content}>
-                    <ul css={listStyle}>
-                        {data.map((item, index) => (
-                            <li key={item.id}>
-                                <a href="/articles/?month=${item.year}-${item.month}">{item.month}月({item.post_count})</a>
-                            </li>
-                        ))}
-                    </ul>
-                </dd>
-            </dl>
+            {articlesCount.map((yearData) => {
+                const yearKey = yearData.year;
+                return (
+                    <dl css={dlStyle} key={yearKey}>
+                        <dt css={accordionStyle} onClick={toggleAccordion}>
+                            <button css={accordionHeaderStyle}>
+                                {yearKey}年
+                                <ArrowIcon direction={isOpen ? "upward" : "downward"} css={arrowStyle}/>
+                            </button>
+                        </dt>
+                        <dd css={isOpen ? contentOpen : content}>
+                            <ul css={listStyle}>
+                                {yearData.data.map((monthData) => {
+                                    console.log("item", monthData);
+                                    const key = yearKey + monthData.month
+                                    return (
+                                        <li key={key}>
+                                            <a href={`/articles/?month=${yearKey}-${monthData.month}`}>{monthData.month}月({monthData.post_count})</a>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
+                        </dd>
+                    </dl>
+                )
+            })}
         </div>
-
     )
 }
 

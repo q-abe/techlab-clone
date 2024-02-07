@@ -20,18 +20,19 @@ type Story = StoryObj<typeof meta>;
 
 type AccordionDataItem = {
     id: number;
-    year: number;
     month: number;
     post_count: number;
 };
 
 export const accordion: Story = {
     args: {
-        data: ArticlesCount.map((item: any) => ({
-            id: item.id,
-            year: item.year,
-            month: item.month,
-            post_count: item.count
-        })) as AccordionDataItem[]
+        articlesCount: ArticlesCount,
     }
 }
+
+
+// ArticlesCount.map((item:number) => ({
+//     id: item.id,
+//     month: item.month,
+//     post_count: item.count
+// })) as AccordionDataItem[]
