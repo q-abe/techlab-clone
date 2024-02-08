@@ -9,27 +9,31 @@ type AccordionProps = {
 
 export const Accordion: FC<AccordionProps> = (props) => {
     const { articlesCount } = props;
-    const [ isOpen, setIsOpen ] = useState(false)
+    const [ isOpen, setIsOpen ] = useState({ 0: false })
 
-    const toggleAccordion = () => {
-        setIsOpen(!isOpen);
-    }
+    const toggleAccordion = (index: number) => {
+        setIsOpen((prevState) => ({
+            ...prevState,
+            [index]: !prevState[index]
+        }));
+    };
+
+
     return (
         <div>
-            {articlesCount.map((yearData) => {
+            {articlesCount.map((yearData, index) => {
                 const yearKey = yearData.year;
                 return (
                     <dl css={dlStyle} key={yearKey}>
-                        <dt css={accordionStyle} onClick={toggleAccordion}>
+                        <dt css={accordionStyle} onClick={() => toggleAccordion(index)}>
                             <button css={accordionHeaderStyle}>
                                 {yearKey}年
-                                <ArrowIcon direction={isOpen ? "upward" : "downward"} css={arrowStyle}/>
+                                <ArrowIcon direction={isOpen[index] ? "upward" : "downward"} css={arrowStyle}/>
                             </button>
                         </dt>
-                        <dd css={isOpen ? contentOpen : content}>
+                        {isOpen[index] ? (<dd css={content}>
                             <ul css={listStyle}>
                                 {yearData.data.map((monthData) => {
-                                    console.log("item", monthData);
                                     const key = yearKey + monthData.month
                                     return (
                                         <li key={key}>
@@ -38,7 +42,8 @@ export const Accordion: FC<AccordionProps> = (props) => {
                                     )
                                 })}
                             </ul>
-                        </dd>
+                        </dd>) : undefined}
+
                     </dl>
                 )
             })}
@@ -97,13 +102,6 @@ const listStyle = css`
 `
 
 const content = css`
-    margin: 0;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-in-out;
-`
-
-const contentOpen = css`
     margin: 0;
     max-height: 200px;
     transition: max-height .2s ease-in-out;

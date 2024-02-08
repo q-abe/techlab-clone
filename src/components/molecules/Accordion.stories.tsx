@@ -29,10 +29,3 @@ export const accordion: Story = {
         articlesCount: ArticlesCount,
     }
 }
-
-
-// ArticlesCount.map((item:number) => ({
-//     id: item.id,
-//     month: item.month,
-//     post_count: item.count
-// })) as AccordionDataItem[]
