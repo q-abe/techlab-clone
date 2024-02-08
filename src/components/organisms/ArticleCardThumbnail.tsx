@@ -4,13 +4,12 @@ import { css } from "@emotion/react";
 import { ArticleTitleText } from "../atoms/symbols/ArticleTitleText";
 
 type ArticleCardProps = {
-    ArticleUrl: string
     index: number;
     articleTitle: string;
 };
 
 export const ArticleCardThumbnail: FC<ArticleCardProps> = (props) => {
-    const { ArticleUrl, index, articleTitle } = props;
+    const { index, articleTitle } = props;
 
     return (
         <div>
@@ -29,13 +28,11 @@ const pictureStyle = css`
     margin: 0;
     padding: 0;
     position: relative;
-    //text-align: center;
 `
 
 const textStyle = css`
     width: 300px;
     height: 84px;
-    //margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;

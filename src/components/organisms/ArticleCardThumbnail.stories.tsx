@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { ArticleCardThumbnail } from "./ArticleCardThumbnail";
-import ArticlesCount from "@/api/ArticlesCountMockDate.json";
 
 const meta = {
     title: "organisms/ArticleCardThumbnail",
@@ -19,7 +18,6 @@ type Story = StoryObj<typeof meta>;
 
 export const card: Story = {
     args: {
-        ArticleUrl: "URLが入ります。",
         index: 0,
         articleTitle: "記事タイトルが入ります。",
     }
