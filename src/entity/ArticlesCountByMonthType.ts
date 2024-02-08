@@ -3,7 +3,7 @@ type ArticlesCountByMonthType = {
     post_count: number;
 }
 
-type ArticlesCountOfYear = {
+export type ArticlesCountOfYear = {
     year: string;
     data: ArticlesCountByMonthType[];
 }
