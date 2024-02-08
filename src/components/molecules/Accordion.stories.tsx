@@ -1,24 +1,26 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import ArticlesCount from "../../api/ArticlesCountMockDate.json";
 
-import { MonthlyArchive } from "./MonthlyArchive";
+import { Accordion } from "./Accordion";
+
 
 const meta = {
-    title: "Accordion",
-    component: MonthlyArchive,
+    title: "SingleAccordion",
+    component: Accordion,
     parameters: {
         layout: "centered",
     },
     tags: [ "autodocs" ],
     argTypes: {},
-} satisfies Meta<typeof MonthlyArchive>;
+} satisfies Meta<typeof Accordion>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const accordion: Story = {
+export const singleAccordion: Story = {
     args: {
-        articlesCount: ArticlesCount,
+        articlesCount: [ ...ArticlesCount ][0],
+        year: "2022",
     }
 }
