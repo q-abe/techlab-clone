@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import ArticlesCount from "../../api/ArticlesCountMockDate.json";
+import ArticlesCount from "../../api/ArticlesCountMockData.json";
 
 import { Accordion } from "./Accordion";
 

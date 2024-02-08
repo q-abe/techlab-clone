@@ -26,7 +26,7 @@ export const Accordion: FC<SAccordionProps> = (props) => {
                     <ArrowIcon direction={isOpen ? "upward" : "downward"} css={arrowStyle}/>
                 </button>
             </dt>
-            <dd css={isOpen ? contentOpen : content}>
+            <dd css={isOpen ? contentOpenStyle : contentStyle}>
                 <ul css={listStyle}>
                     {articlesCount.data.map((monthData) => {
                         const key = year + monthData.month
@@ -92,13 +92,13 @@ const listStyle = css`
     font-size: 12px;
 `
 
-const content = css`
+const contentStyle = css`
     margin: 0;
     overflow: hidden;
     max-height: 0;
     transition: max-height .100000s ease-in-out;
 `
-const contentOpen = css`
+const contentOpenStyle = css`
     margin: 0;
     max-height: 200px;
     transition: max-height .100000s ease-in-out;
