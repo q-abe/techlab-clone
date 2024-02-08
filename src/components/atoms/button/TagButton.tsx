@@ -2,18 +2,18 @@ import { css } from "@emotion/react";
 import React, { FC } from "react";
 
 type TagButtonProps = {
-    tagUrl: string;
+    url: string;
     label: string;
 };
 
 export const TagButton: FC<TagButtonProps> = (props) => {
     const {
-        tagUrl,
+        url,
         label,
     } = props;
 
     return (
-        <a href={tagUrl} css={tagStyle}>
+        <a href={url} css={tagStyle}>
             {label}
         </a>
     );

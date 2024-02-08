@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const tagButton: Story = {
     args: {
-        tagUrl: "",
+        url: "",
         label: "パフォーマンス",
     },
 }
