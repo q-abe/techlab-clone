@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ArticleCardThumbnail } from "./ArticleCardThumbnail";
 
 const meta = {
-    title: "organisms/ArticleCardThumbnail",
+    title: "molecules/ArticleCardThumbnail",
     component: ArticleCardThumbnail,
     parameters: {
         layout: "centered",
