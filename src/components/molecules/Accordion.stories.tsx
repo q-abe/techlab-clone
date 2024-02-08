@@ -21,6 +21,5 @@ type Story = StoryObj<typeof meta>;
 export const singleAccordion: Story = {
     args: {
         articlesCount: [ ...ArticlesCount ][0],
-        year: "2022",
     }
 }
