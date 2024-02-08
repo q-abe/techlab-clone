@@ -1,6 +1,6 @@
 import { css, SerializedStyles } from "@emotion/react";
 import React, { FC } from "react";
-import { ArrowIcon } from "./symbols/ArrowIcon";
+import { ArrowIcon } from "../symbols/ArrowIcon";
 
 type ButtonProps = {
     label: string;
