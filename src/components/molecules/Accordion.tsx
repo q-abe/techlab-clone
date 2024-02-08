@@ -5,11 +5,10 @@ import { ArticlesCountOfYear } from "../../entity/ArticlesCountByMonthType"
 
 type SAccordionProps = {
     articlesCount: ArticlesCountOfYear;
-    year: string;
 };
 
 export const Accordion: FC<SAccordionProps> = (props) => {
-    const { articlesCount, year } = props;
+    const { articlesCount } = props;
     const [ isOpen, setIsOpen ] = useState(false)
     console.log("articlesCount", articlesCount)
 
@@ -22,17 +21,17 @@ export const Accordion: FC<SAccordionProps> = (props) => {
         <dl css={dlStyle}>
             <dt css={accordionStyle} onClick={() => toggleAccordion()}>
                 <button css={accordionHeaderStyle}>
-                    {year}年
+                    {articlesCount.year}年
                     <ArrowIcon direction={isOpen ? "upward" : "downward"} css={arrowStyle}/>
                 </button>
             </dt>
-            <dd css={isOpen ? contentOpen : content}>
+            <dd css={isOpen ? contentOpenStyle : contentStyle}>
                 <ul css={listStyle}>
                     {articlesCount.data.map((monthData) => {
-                        const key = year + monthData.month
+                        const key = articlesCount.year + monthData.month
                         return (
                             <li key={key}>
-                                <a href={`/articles/?month=${year}-${monthData.month}`}>{monthData.month}月({monthData.post_count})</a>
+                                <a href={`/articles/?month=${articlesCount.year}-${monthData.month}`}>{monthData.month}月({monthData.post_count})</a>
                             </li>
                         )
                     })}
@@ -92,13 +91,13 @@ const listStyle = css`
     font-size: 12px;
 `
 
-const content = css`
+const contentStyle = css`
     margin: 0;
     overflow: hidden;
     max-height: 0;
     transition: max-height .100000s ease-in-out;
 `
-const contentOpen = css`
+const contentOpenStyle = css`
     margin: 0;
     max-height: 200px;
     transition: max-height .100000s ease-in-out;
