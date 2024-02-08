@@ -12,11 +12,9 @@ export const ArticleCardThumbnail: FC<ArticleCardProps> = (props) => {
     const { index, articleTitle } = props;
 
     return (
-        <div>
-            <div css={pictureStyle}>
-                <ArticleThumbnail pictureId={index}/>
-                <ArticleTitleText css={textStyle} titleText={articleTitle}/>
-            </div>
+        <div css={pictureStyle}>
+            <ArticleThumbnail pictureId={index}/>
+            <ArticleTitleText css={textStyle} titleText={articleTitle}/>
         </div>
     )
 };
