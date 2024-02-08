@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { ArticlesCounts } from "../../entity/ArticlesCountByMonthType";
-import { Accordion } from "./Accordion";
+import { Accordion } from "../molecules/Accordion";
 
 type AccordionProps = {
     articlesCount: ArticlesCounts;

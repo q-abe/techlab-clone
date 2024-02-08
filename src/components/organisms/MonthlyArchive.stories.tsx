@@ -4,7 +4,7 @@ import ArticlesCount from "../../api/ArticlesCountMockData.json";
 import { MonthlyArchive } from "./MonthlyArchive";
 
 const meta = {
-    title: "Accordion",
+    title: "organisms/MonthlyArchive",
     component: MonthlyArchive,
     parameters: {
         layout: "centered",
@@ -17,7 +17,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const accordion: Story = {
+export const monthlyArchive: Story = {
     args: {
         articlesCount: ArticlesCount,
     }
