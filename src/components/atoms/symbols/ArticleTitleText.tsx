@@ -2,21 +2,21 @@ import React, { FC, SVGProps } from "react";
 import { css } from "@emotion/react";
 
 type TitleProps = {
-    onClick?: () => {};
+    titleText: string;
 };
 
 export const ArticleTitleText: FC<TitleProps> = (props) => {
-    const { onClick, } = props;
+    const { titleText, } = props;
 
     const textStyle = css`
-        color: #A0C5E8;
+        color: #FFFFFF;
     `
 
     return (
         <div>
-            <p
-                css={textStyle} onClick={onClick} {...props}>
-                記事タイトル文字</p>
+            <p css={textStyle}  {...props}>
+                {titleText}
+            </p>
         </div>
     );
 };
