@@ -5,32 +5,25 @@ import { TagButton } from "../atoms/button/TagButton";
 type ArticleCardProps = {
     dateCreated: string;
     title: string;
-    tag: string
+    tags: string[]
 };
 
 export const ArticleCardDetail: FC<ArticleCardProps> = (props) => {
-    const { dateCreated, title, tag } = props;
+    const { dateCreated, title, tags } = props;
 
     return (
         <div css={detailStyle}>
             <p css={dateStyle}>{dateCreated}</p>
             <h2 css={titleStyle}>{title}</h2>
             <ul css={tagStyle}>
-                <li css={liStyle}>
+
+                {tags.map((tag, index) => (
+                    <li css={liStyle} key={tag}>
                     <span>
-                    <TagButton label={tag} url={""}/>
+                    <TagButton label={tags[index]} url={""}/>
                     </span>
-                </li>
-                <li css={liStyle}>
-                    <span>
-                    <TagButton label={tag} url={""}/>
-                    </span>
-                </li>
-                <li css={liStyle}>
-                    <span>
-                    <TagButton label={tag} url={""}/>
-                    </span>
-                </li>
+                    </li>
+                ))}
             </ul>
         </div>
     )

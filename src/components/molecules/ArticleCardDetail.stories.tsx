@@ -21,6 +21,6 @@ export const card: Story = {
     args: {
         dateCreated: "2024.02.01[Tue]",
         title: "Shopify Flowでユーザーの購入総額によってユーザーにランクタグをつける方法。",
-        tag: "Shopify"
+        tags: [ "Shopify", "Git", "パフォーマンス" ],
     }
 }
