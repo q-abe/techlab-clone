@@ -39,7 +39,6 @@ const dateStyle = css`
     font-size: 13px;
     color: #666666;
     padding: 1rem 1rem 0 1rem;
-    display: flex;
     align-items: center;
     justify-content: center;
 
