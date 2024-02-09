@@ -32,7 +32,7 @@ const textStyle = css`
     width: 300px;
     height: 84px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     inline-size: 250px;
@@ -41,5 +41,7 @@ const textStyle = css`
     //タイトルが短いと中央、長いと左寄せ。
     margin-inline: auto;
     max-inline-size: max-content;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
