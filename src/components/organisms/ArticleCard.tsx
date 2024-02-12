@@ -1,34 +1,37 @@
 import React, { FC } from "react";
 import { ArticleCardDetail } from "../molecules/ArticleCardDetail";
 import { ArticleCardThumbnail } from "../molecules/ArticleCardThumbnail";
-import { ArticleContentsList } from "@/entity/ArticleContentType";
 import { css } from "@emotion/react";
 
 type ArticleCardProps = {
-    articleEntity: ArticleContentsList
+    id: number;
+    date: string;
+    tags: string[]
+    title: string;
 };
 
 export const ArticleCard: FC<ArticleCardProps> = (props) => {
-    const { articleEntity } = props;
+    const { id, date, tags, title } = props;
     return (
         <ul css={ulStyle}>
-            {articleEntity.map((content, index) => {
-                return (
-                    <li key={content.id}>
-                        <a href={`${index}`}>
-                            <ArticleCardThumbnail articleTitle={content.title}
-                                                  index={content.id}/>
-                            <ArticleCardDetail dateCreated={content.created_date}
-                                               tags={content.tags}
-                                               title={content.title}/>
-                        </a>
-                    </li>
-                );
-            })}
+            <li>
+                <a href={`${id}`} css={a}>
+                    <ArticleCardThumbnail articleTitle={title}
+                                          index={id}/>
+                    <ArticleCardDetail dateCreated={date}
+                                       tags={tags}
+                                       title={title}/>
+                </a>
+            </li>
+
         </ul>
     );
 };
 
 const ulStyle = css`
     list-style: none;
+`
+
+const a = css`
+    text-decoration: none;
 `
