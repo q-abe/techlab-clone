@@ -4,39 +4,39 @@
     "data": [
       {
         "month": 2,
-        "post_count": 3
+        "postCount": 3
       },
       {
         "month": 3,
-        "post_count": 1
+        "postCount": 1
       },
       {
         "month": 4,
-        "post_count": 6
+        "postCount": 6
       },
       {
         "month": 6,
-        "post_count": 5
+        "postCount": 5
       },
       {
         "month": 7,
-        "post_count": 9
+        "postCount": 9
       },
       {
         "month": 8,
-        "post_count": 2
+        "postCount": 2
       },
       {
         "month": 9,
-        "post_count": 4
+        "postCount": 4
       },
       {
         "month": 10,
-        "post_count": 7
+        "postCount": 7
       },
       {
         "month": 11,
-        "post_count": 5
+        "postCount": 5
       }
     ]
   },
@@ -45,39 +45,39 @@
     "data": [
       {
         "month": 2,
-        "post_count": 7
+        "postCount": 7
       },
       {
         "month": 3,
-        "post_count": 5
+        "postCount": 5
       },
       {
         "month": 4,
-        "post_count": 2
+        "postCount": 2
       },
       {
         "month": 5,
-        "post_count": 10
+        "postCount": 10
       },
       {
         "month": 6,
-        "post_count": 8
+        "postCount": 8
       },
       {
         "month": 7,
-        "post_count": 4
+        "postCount": 4
       },
       {
         "month": 8,
-        "post_count": 7
+        "postCount": 7
       },
       {
         "month": 9,
-        "post_count": 3
+        "postCount": 3
       },
       {
         "month": 10,
-        "post_count": 1
+        "postCount": 1
       }
     ]
   },
@@ -86,7 +86,7 @@
     "data": [
       {
         "month": 2,
-        "post_count": 4
+        "postCount": 4
       }
     ]
   }
