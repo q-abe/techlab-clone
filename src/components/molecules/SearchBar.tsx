@@ -31,7 +31,7 @@ const inputStyle = css`
 `
 
 const searchStyle = css`
-    width: 14.59px;
+    width: 30px;
     stroke: #FFFFFF;
 `
 

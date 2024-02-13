@@ -8,7 +8,7 @@ type CloseProps = {
 const crossButton = css`
     cursor: pointer;
     position: absolute;
-    right: 18px;
+    right: 40px;
     top: 24px;
     display: block;
     padding: 0;
@@ -19,6 +19,7 @@ const crossButton = css`
     background: transparent;
     overflow: hidden;
     transition: .2s opacity ease-in-out;
+    color: red;
 
     ::before {
         content: "";
@@ -26,7 +27,7 @@ const crossButton = css`
         left: 0;
         top: 0;
         width: 20px;
-        height: 20px;
+        height: 40px;
         display: block;
         border-left: 1px solid #FFFFFF;
         transform-origin: left top;
@@ -39,7 +40,7 @@ const crossButton = css`
         right: 0;
         top: 0;
         width: 20px;
-        height: 20px;
+        height: 40px;
         display: block;
         border-right: 1px solid #FFFFFF;
         transform-origin: right top;
