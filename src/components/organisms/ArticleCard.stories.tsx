@@ -19,6 +19,10 @@ type Story = StoryObj<typeof meta>;
 
 export const card: Story = {
     args: {
-        articleEntity: ArticleContentsList
+        id: 1,
+        date: "2024-02-03[Sat]",
+        tags: [ "Git", "React", "パフォーマンス" ],
+        title: "Reactチュートリアル",
+
     }
 }

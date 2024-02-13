@@ -8,7 +8,7 @@ type ArticleCardProps = {
     tags: string[]
 };
 
-export const ArticleCardDetail: FC<ArticleCardProps> = (props) => {
+export const ArticleCardDescription: FC<ArticleCardProps> = (props) => {
     const { dateCreated, title, tags } = props;
 
     return (
@@ -41,10 +41,13 @@ const dateStyle = css`
     padding: 1rem 1rem 0 1rem;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    display: flex;
+
 
     :after {
         content: "";
-        width: 100%;
+        width: 54%;
         height: 1px;
         margin: 0 0 0 1rem;
         background-color: #ADADAD;

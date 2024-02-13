@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { ArticleCardDetail } from "./ArticleCardDetail";
+import { ArticleCardDescription } from "./ArticleCardDescription";
 import { string } from "prop-types";
 
 const meta = {
-    title: "molecules/ArticleCardDetail",
-    component: ArticleCardDetail,
+    title: "molecules/ArticleCardDescription",
+    component: ArticleCardDescription,
     parameters: {
         layout: "centered",
     },
     tags: [ "autodocs" ],
     argTypes: {},
-} satisfies Meta<typeof ArticleCardDetail>;
+} satisfies Meta<typeof ArticleCardDescription>;
 
 export default meta;
 
