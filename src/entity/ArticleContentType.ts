@@ -1,9 +1,10 @@
-export type ArticleType = {
+type ArticleContentType = {
     id: number;
     title: string;
     content: string;
     created_date: string;
     updated_date: string;
     author_id: number;
-    tags: Array<number>;
+    tags: string[];
 }
+export type ArticleContentsList = ArticleContentType[];

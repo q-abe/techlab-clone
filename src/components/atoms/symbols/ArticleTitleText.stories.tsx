@@ -8,7 +8,7 @@ const meta = {
     parameters: {
         layout: "centered",
     },
-    tags: ["autodocs"],
+    tags: [ "autodocs" ],
     argTypes: {},
 } satisfies Meta<typeof ArticleTitleText>;
 
@@ -17,5 +17,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Text: Story = {
-    args: {},
+    args: {
+        titleText: "ここにタイトルが入ります。"
+    },
 };

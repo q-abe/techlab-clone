@@ -15,7 +15,7 @@ export const MonthlyArchive: FC<AccordionProps> = (props) => {
             {articlesCount.map((yearData, index) => {
                 const yearKey = yearData.year;
                 return (
-                    <Accordion articlesCount={yearData} year={yearKey} key={yearKey}/>
+                    <Accordion articlesCount={yearData} key={yearKey}/>
                 )
             })}
         </div>

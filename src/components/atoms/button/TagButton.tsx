@@ -20,16 +20,12 @@ export const TagButton: FC<TagButtonProps> = (props) => {
 };
 
 const tagStyle = css`
+    display: inline-block;
     background: #999999;
     color: #FFFFFF;
-    padding: 4px 7px;
+    padding: 0px 7px;
     text-decoration: none;
     border: 1px solid #999999;
-    font-size: 12px;
+    font-size: 11px;
     transition: .3s all ease;
-
-    :hover {
-        background: #FFFFFF;
-        color: #999999;
-    }
 `
