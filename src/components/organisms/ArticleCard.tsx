@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ArticleCardDetail } from "../molecules/ArticleCardDetail";
+import { ArticleCardDescription } from "../molecules/ArticleCardDescription";
 import { ArticleCardThumbnail } from "../molecules/ArticleCardThumbnail";
 import { css } from "@emotion/react";
 
@@ -18,9 +18,9 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
                 <a href={`${id}`} css={a}>
                     <ArticleCardThumbnail articleTitle={title}
                                           index={id}/>
-                    <ArticleCardDetail dateCreated={date}
-                                       tags={tags}
-                                       title={title}/>
+                    <ArticleCardDescription dateCreated={date}
+                                            tags={tags}
+                                            title={title}/>
                 </a>
             </li>
 

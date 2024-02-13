@@ -8,7 +8,7 @@ type ArticleCardProps = {
     tags: string[]
 };
 
-export const ArticleCardDetail: FC<ArticleCardProps> = (props) => {
+export const ArticleCardDescription: FC<ArticleCardProps> = (props) => {
     const { dateCreated, title, tags } = props;
 
     return (
