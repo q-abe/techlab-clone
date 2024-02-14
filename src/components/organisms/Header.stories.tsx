@@ -6,9 +6,9 @@ import TagMockDate from "../../api/TagMockDate.json";
 const meta = {
     title: "organisms/Header",
     component: Header,
-    parameters: {
-        layout: "centered",
-    },
+    // parameters: {
+    //     layout: "centered",
+    // },
     tags: [ "autodocs" ],
     argTypes: {},
 } satisfies Meta<typeof Header>;
