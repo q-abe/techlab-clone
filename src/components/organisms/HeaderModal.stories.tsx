@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 export const headerModal: Story = {
     args: {
         isOpen: true,
-        fun: () => {
+        handleClick: () => {
         },
         texts: TagMockDate
     }

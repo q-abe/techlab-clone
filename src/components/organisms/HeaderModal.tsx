@@ -6,53 +6,72 @@ import { allTags } from "../../entity/TagType";
 
 type HeaderModalProps = {
     isOpen: boolean
-    fun: any
+    handleClick: any
     texts: allTags
-
 };
 
 export const HeaderModal: FC<HeaderModalProps> = (props) => {
-    const { isOpen, fun, texts } = props;
-
+    const { isOpen, handleClick, texts } = props;
 
     return (
-        isOpen ? <div css={overlay}>
-            <div css={content}>
-                <div>
-                    <CloseIcon/>
-
+        <div>
+            <div css={isOpen ? modalVisible : modalHidden}>
+                <div css={content}>
+                    <div>
+                        <CloseIcon onClick={handleClick}/>
+                    </div>
+                    <div css={searchStyle}>
+                        <SearchBar onClick={() => {
+                        }}/>
+                    </div>
+                    <div css={tagsStyle}>
+                        <ul css={ulStyle}>
+                            {texts.map((text, index) => {
+                                return (
+                                    <li key={text.id}>
+                                        <a css={tagStyle} href="https://techlab.q-co.jp/articles/category/HTML/"
+                                           key={text.id}>
+                                            {text.name}
+                                        </a>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
                 </div>
-                <SearchBar onClick={() => {
-                }}/>
-                <ul css={ulStyle}>
-                    {texts.map((text, index) => {
-                        return (
-                            <li key={text.id}>
-                                <a css={tagStyle} href="https://techlab.q-co.jp/articles/category/HTML/" key={text.id}>
-                                    {text.name}
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
             </div>
-        </div> : undefined
-
-
+        </div>
     );
 };
 
-const overlay = css`
+const modalVisible = css`
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
-`
+    opacity: 1;
+    transition: transform 0.4s ease-in-out 0s, opacity 0.3s ease-in-out 0s;
+    transform: translateY(0);
+`;
+
+const modalHidden = css`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out 0s, opacity 0.3s ease-in-out 0s;
+    transform: translateY(-100%);
+`;
 
 const content = css`
     z-index: 2;
@@ -63,6 +82,15 @@ const content = css`
     top: 0;
 `
 
+const searchStyle = css`
+    margin-left: auto;
+    padding: 0 50px 0 50px;
+`
+
+const tagsStyle = css`
+    padding: 10px 180px 10px 10px;
+`
+
 const tagStyle = css`
     color: white;
     padding-left: 15px;
@@ -70,10 +98,8 @@ const tagStyle = css`
 
 const ulStyle = css`
     line-height: 3;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
+    padding-right: 100px;
+    padding-left: 100px;
     padding-inline-start: 60px;
     display: flex;
     flex-wrap: wrap;
