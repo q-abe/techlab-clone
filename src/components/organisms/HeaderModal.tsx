@@ -6,8 +6,8 @@ import { allTags } from "../../entity/TagType";
 
 type HeaderModalProps = {
     isOpen: boolean
-    handleClick: any
-    texts: allTags
+    handleClick: () => {}
+    texts: Tags
 };
 
 export const HeaderModal: FC<HeaderModalProps> = (props) => {
