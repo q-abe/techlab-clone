@@ -8,13 +8,10 @@ type SearchProps = {
 
 const formStyle = css`
     display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    width: 100%;
     max-width: 640px;
-    align-items: center;
     border-bottom: 2px solid #FFFFFF;
     color: #FFFFFF;
+    width: 100%;
 `
 
 const inputStyle = css`
@@ -23,15 +20,10 @@ const inputStyle = css`
     background: transparent;
     color: #FFFFFF;
     font-size: 18px;
-    margin: auto;
-    height: 28px;
     border: none;
-    padding: 0 8px 4px;
-
 `
 
 const searchStyle = css`
-    width: 14.59px;
     stroke: #FFFFFF;
 `
 

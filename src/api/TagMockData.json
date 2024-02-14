@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "HTML"
+  },
+  {
+    "id": 2,
+    "name": "JavaScript"
+  },
+  {
+    "id": 3,
+    "name": "Node.js"
+  },
+  {
+    "id": 4,
+    "name": "Next.js"
+  },
+  {
+    "id": 5,
+    "name": "React"
+  },
+  {
+    "id": 6,
+    "name": "TypeScript"
+  },
+  {
+    "id": 7,
+    "name": "パフォーマンス"
+  },
+  {
+    "id": 8,
+    "name": "Shopify"
+  },
+  {
+    "id": 9,
+    "name": "NewRelic"
+  },
+  {
+    "id": 10,
+    "name": "Docker"
+  },
+  {
+    "id": 11,
+    "name": "CI/CD"
+  },
+  {
+    "id": 12,
+    "name": "Git"
+  },
+  {
+    "id": 13,
+    "name": "Strapi"
+  },
+  {
+    "id": 14,
+    "name": "Jest"
+  },
+  {
+    "id": 15,
+    "name": "テスト"
+  },
+  {
+    "id": 16,
+    "name": "Database"
+  },
+  {
+    "id": 17,
+    "name": "AWS"
+  }
+]

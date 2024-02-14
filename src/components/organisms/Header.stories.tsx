@@ -1,18 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { Header } from "./Header";
+import TagMockDate from "../../api/TagMockData.json";
 
 const meta = {
-    title: "SearchBar",
+    title: "organisms/Header",
     component: Header,
-    parameters: {
-        layout: "centered",
-    },
-    tags: ["autodocs"],
-    argTypes: {
-    },
+    // parameters: {
+    //     layout: "centered",
+    // },
+    tags: [ "autodocs" ],
+    argTypes: {},
 } satisfies Meta<typeof Header>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
+export const header: Story = {
+    args: {
+        allTags: TagMockDate
+    }
+}
