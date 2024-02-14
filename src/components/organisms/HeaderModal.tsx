@@ -18,7 +18,7 @@ export const HeaderModal: FC<HeaderModalProps> = (props) => {
             <div css={isOpen ? modalVisible : modalHidden}>
                 <div css={content}>
                     <div>
-                        <CloseIcon onClick={handleClick}/>
+                        <CloseIcon css={closeStyle} onClick={handleClick}/>
                     </div>
                     <div css={searchStyle}>
                         <SearchBar onClick={() => {
@@ -29,7 +29,8 @@ export const HeaderModal: FC<HeaderModalProps> = (props) => {
                             {texts.map((text, index) => {
                                 return (
                                     <li key={text.id}>
-                                        <a css={tagStyle} href="https://techlab.q-co.jp/articles/category/HTML/"
+                                        <a css={tagStyle}
+                                           href={`https://techlab.q-co.jp/articles/category/${text.name}/`}
                                            key={text.id}>
                                             {text.name}
                                         </a>
@@ -82,6 +83,13 @@ const content = css`
     top: 0;
 `
 
+const closeStyle = css`
+    :hover {
+        opacity: 0.7;
+        transition: .2s opacity ease-in-out;
+    }
+`
+
 const searchStyle = css`
     margin-left: auto;
     padding: 0 50px 0 50px;
@@ -94,6 +102,11 @@ const tagsStyle = css`
 const tagStyle = css`
     color: white;
     padding-left: 15px;
+
+    :hover {
+        opacity: 0.7;
+        transition: .2s opacity ease-in-out;
+    }
 `
 
 const ulStyle = css`
