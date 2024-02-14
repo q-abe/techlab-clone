@@ -52,9 +52,6 @@ const modalVisible = css`
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 1;
     transition: transform 0.4s ease-in-out 0s, opacity 0.3s ease-in-out 0s;
     transform: translateY(0);
@@ -66,9 +63,6 @@ const modalHidden = css`
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     opacity: 0;
     transition: transform 0.4s ease-in-out 0s, opacity 0.3s ease-in-out 0s;
     transform: translateY(-100%);
@@ -91,12 +85,25 @@ const closeStyle = css`
 `
 
 const searchStyle = css`
-    margin-left: auto;
-    padding: 0 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 `
 
 const tagsStyle = css`
-    padding: 10px 180px 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+`
+
+const ulStyle = css`
+    line-height: 3;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    max-width: 640px;
 `
 
 const tagStyle = css`
@@ -107,18 +114,4 @@ const tagStyle = css`
         opacity: 0.7;
         transition: .2s opacity ease-in-out;
     }
-`
-
-const ulStyle = css`
-    line-height: 3;
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-inline-start: 60px;
-    display: flex;
-    flex-wrap: wrap;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    list-style: none;
-    width: 100%;
-    max-width: 640px;
 `

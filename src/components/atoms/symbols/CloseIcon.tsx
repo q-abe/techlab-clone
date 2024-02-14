@@ -8,7 +8,7 @@ type CloseProps = {
 const crossButton = css`
     cursor: pointer;
     position: absolute;
-    right: 40px;
+    right: 60px;
     top: 24px;
     display: block;
     padding: 0;

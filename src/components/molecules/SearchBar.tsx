@@ -11,6 +11,7 @@ const formStyle = css`
     max-width: 640px;
     border-bottom: 2px solid #FFFFFF;
     color: #FFFFFF;
+    width: 100%;
 `
 
 const inputStyle = css`
