@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { ArticleCard } from "./ArticleCard";
-import ArticleContentsList from "../../api/ArticlesMockDate.json";
 
 const meta = {
     title: "organisms/ArticleCard",

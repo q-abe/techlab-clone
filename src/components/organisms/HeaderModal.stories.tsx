@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { HeaderModal } from "./HeaderModal";
-import TagMockDate from "../../api/TagMockDate.json"
+import TagMockDate from "../../api/TagMockData.json"
 
 const meta = {
     title: "organisms/HeaderModal",
