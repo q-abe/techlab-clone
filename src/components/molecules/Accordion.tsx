@@ -48,25 +48,24 @@ const dlStyle = css`
 
 const accordionStyle = css`
     border-bottom: 1px solid #707070;
-    width: 560px;
-    margin: 0;
-    padding: 0;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
 `
 
 const accordionHeaderStyle = css`
-    margin: 0;
     padding: 5px 10px;
     background: transparent;
     border: none;
-    width: 560px;
-    height: 37px;
+    width: 100%;
     text-align: left;
     font-weight: bold;
     cursor: pointer;
     font-size: 14px;
     align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
 
     :hover {
         transition: opacity .2s ease-in-out;
@@ -75,7 +74,6 @@ const accordionHeaderStyle = css`
 `
 
 const arrowStyle = css`
-    float: right;
     margin-right: 5px;
     margin-top: 1px;
 `
