@@ -71,13 +71,5 @@ const overlayVisible = css`
 `
 
 const overlayHidden = css`
-    z-index: 1;
-    visibility: hidden;
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #1E1E1E;
     opacity: 0;
-    transition: .3s visibility ease-in-out, .3s opacity ease-in-out;
 `
