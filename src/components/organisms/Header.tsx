@@ -3,10 +3,10 @@ import { QTextLogo } from "../atoms/symbols/QTextLogo";
 import { SearchIcon } from "../atoms/symbols/SearchIcon";
 import { HeaderModal } from "../organisms/HeaderModal";
 import { css } from "@emotion/react";
-import { allTags } from "../../entity/TagType";
+import { Tags } from "../../entity/TagType";
 
 type HeaderProps = {
-    allTags: allTags
+    allTags: Tags
 };
 
 export const Header: FC<HeaderProps> = (props) => {

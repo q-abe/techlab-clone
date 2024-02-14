@@ -1,7 +1,7 @@
-export type TagTypes = {
+export type TagType = {
     id: number;
     name: string;
 }
 
-export type allTags = TagTypes[];
+export type Tags = TagType[];
 

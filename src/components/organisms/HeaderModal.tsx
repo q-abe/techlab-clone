@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { css } from "@emotion/react";
 import { SearchBar } from "../molecules/SearchBar";
 import { CloseIcon } from "../atoms/symbols/CloseIcon";
-import { allTags } from "../../entity/TagType";
+import { Tags } from "../../entity/TagType";
 
 type HeaderModalProps = {
     isOpen: boolean
