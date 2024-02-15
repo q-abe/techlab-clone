@@ -6,7 +6,7 @@ import { MonthlyArchive } from "../organisms/MonthlyArchive";
 import { ArticlesCounts } from "../../entity/ArticlesCountByMonthType";
 import ArticlesCount from "../../api/ArticlesCountMockData.json";
 import { CalendarIcon } from "../atoms/symbols/CalendarIcon";
-
+import { QImageLogo } from "../atoms/symbols/QImageLogo";
 
 type FooterProps = {
     articlesCount: ArticlesCounts;
@@ -58,7 +58,37 @@ export const Footer: FC<FooterProps> = (props) => {
                     <h2 css={h2Style}>TechQLab(テックラボ)とは?</h2>
                     <p css={pStyle}>株式会社キューのWeb技術者によるWeb技術・ノウハウを発信するブログです。</p>
                 </section>
-
+            </div>
+            <div css={footerFootStyle}>
+                <picture css={qLogoStyle}>
+                    <QImageLogo/>
+                </picture>
+                <nav>
+                    <ul css={ulFooterStyle}>
+                        <li>
+                            <a target="_blank" href="https://www.q-co.jp/" css={footerMenuStyle}>Corporate Site</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://cr.q-co.jp/" css={footerMenuStyle}>Creative Dept</a>
+                        </li>
+                        <li>
+                            <a href="/contact/" css={footerMenuStyle}>Contact</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.wantedly.com/companies/q-co"
+                               css={footerMenuStyle}>Recruit</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div css={underStyle}>
+                    <div css={footerTextStyle}></div>
+                    <p css={footerTextStyle}>
+                        ©︎ Q co.,ltd.
+                    </p>
+                    <a css={footerPrivacyStyle} href="/privacy/">
+                        {"> Privacy Policy"}
+                    </a>
+                </div>
             </div>
         </footer>
     );
@@ -126,4 +156,67 @@ const h2Style = css`
 
 const pStyle = css`
     font-size: 12px;
+`
+
+const footerFootStyle = css`
+    background-color: #DDDDDD;
+    padding: 25px 0 0 0;
+    gap: 16px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0;
+`
+
+const qLogoStyle = css`
+    max-width: 100%;
+`
+
+const ulFooterStyle = css`
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 0 11px;
+`
+
+const footerMenuStyle = css`
+    text-decoration: none;
+    color: #666666;
+    font-size: 12px;
+
+    :hover {
+        transition: .2s opacity ease-in-out;
+        opacity: 0.7;
+    }
+`
+
+const underStyle = css`
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
+`
+
+const footerTextStyle = css`
+    margin: 0;
+    text-decoration: none;
+    color: #666666;
+    font-size: 10px;
+    text-align: center;
+`
+
+const footerPrivacyStyle = css`
+    text-decoration: none;
+    color: #666666;
+    font-size: 10px;
+    text-align: right;
+    padding-right: 20px;
+
+    :hover {
+        transition: .2s opacity ease-in-out;
+        opacity: 0.7;
+    }
 `
