@@ -3,21 +3,21 @@ import { ArrowIcon } from "../atoms/symbols/ArrowIcon";
 import { css, SerializedStyles } from "@emotion/react";
 import { ArticlesCountOfYear } from "../../entity/ArticlesCountByMonthType"
 
-type SAccordionProps = {
+type AccordionProps = {
     articlesCount: ArticlesCountOfYear;
-    color: string;
-    cssColor: SerializedStyles;
+    accordionHeaderColor: string;
+    accordionDescriptionColor: SerializedStyles;
 };
 
-export const Accordion: FC<SAccordionProps> = (props) => {
-    const { articlesCount, cssColor, color } = props;
+export const Accordion: FC<AccordionProps> = (props) => {
+    const { articlesCount, accordionDescriptionColor, accordionHeaderColor } = props;
     const [ isOpen, setIsOpen ] = useState(false)
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
     }
 
-    const accordionHeaderStyles = accordionHeaderStyle(color)
+    const accordionHeaderStyles = accordionHeaderStyle(accordionHeaderColor);
 
     return (
         <dl css={dlStyle}>
@@ -33,7 +33,7 @@ export const Accordion: FC<SAccordionProps> = (props) => {
                         const key = articlesCount.year + monthData.month
                         return (
                             <li key={key}>
-                                <a css={[ linkStyle, cssColor ]}
+                                <a css={[ linkStyle, accordionDescriptionColor ]}
                                    href={`/articles/?month=${articlesCount.year}-${monthData.month}`}>{monthData.month}月({monthData.postCount})</a>
                             </li>
                         )
@@ -75,7 +75,7 @@ const accordionHeaderStyle = (color: string) => css`
     :hover {
         transition: opacity .2s ease-in-out;
         opacity: 0.7;
-    }
+        }
 `
 
 const arrowStyle = css`

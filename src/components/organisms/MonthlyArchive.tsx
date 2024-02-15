@@ -5,8 +5,8 @@ import { SerializedStyles } from "@emotion/react";
 
 type AccordionProps = {
     articlesCount: ArticlesCounts;
-    color: string
-    cssColor: SerializedStyles
+    color: string;
+    cssColor: SerializedStyles;
 };
 
 export const MonthlyArchive: FC<AccordionProps> = (props) => {
@@ -17,7 +17,8 @@ export const MonthlyArchive: FC<AccordionProps> = (props) => {
             {articlesCount.map((yearData) => {
                 const yearKey = yearData.year;
                 return (
-                    <Accordion articlesCount={yearData} key={yearKey} color={color} cssColor={cssColor}/>
+                    <Accordion articlesCount={yearData} key={yearKey} accordionHeaderColor={color}
+                               accordionDescriptionColor={cssColor}/>
                 )
             })}
         </div>

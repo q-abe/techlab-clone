@@ -20,7 +20,7 @@ export const ArticleCardDescription: FC<ArticleCardProps> = (props) => {
                 {tags.map((tag, index) => (
                     <li css={liStyle} key={tag}>
                     <span>
-                    <TagButton label={tags[index]} url={""} isHover={false}/>
+                    <TagButton label={tags[index]} url={""} hoverAble={false}/>
                     </span>
                     </li>
                 ))}

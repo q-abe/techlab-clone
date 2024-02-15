@@ -4,14 +4,14 @@ import React, { FC } from "react";
 type TagButtonProps = {
     url: string;
     label: string;
-    isHover: boolean;
+    hoverAble: boolean;
 };
 
 export const TagButton: FC<TagButtonProps> = (props) => {
-    const { url, label, isHover } = props;
+    const { url, label, hoverAble } = props;
 
     return (
-        <a href={url} css={isHover ? [ tagStyle, tagHover ] : tagStyle}>
+        <a href={url} css={hoverAble ? [ tagStyle, tagHover ] : tagStyle}>
             {label}
         </a>
     );
