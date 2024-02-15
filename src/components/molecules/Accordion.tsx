@@ -31,7 +31,8 @@ export const Accordion: FC<SAccordionProps> = (props) => {
                         const key = articlesCount.year + monthData.month
                         return (
                             <li key={key}>
-                                <a href={`/articles/?month=${articlesCount.year}-${monthData.month}`}>{monthData.month}月({monthData.post_count})</a>
+                                <a css={[ linkStyle, cssColor ]}
+                                   href={`/articles/?month=${articlesCount.year}-${monthData.month}`}>{monthData.month}月({monthData.postCount})</a>
                             </li>
                         )
                     })}
