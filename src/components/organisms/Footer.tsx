@@ -7,6 +7,7 @@ import { ArticlesCounts } from "../../entity/ArticlesCountByMonthType";
 import ArticlesCount from "../../api/ArticlesCountMockData.json";
 import { CalendarIcon } from "../atoms/symbols/CalendarIcon";
 import { QImageLogo } from "../atoms/symbols/QImageLogo";
+import tagMockData from "../../api/TagMockData.json"
 
 type FooterProps = {
     articlesCount: ArticlesCounts;
@@ -25,34 +26,19 @@ const cssColor = css`
 
 export const Footer: FC<FooterProps> = (props) => {
     const {} = props;
-    const allTags = [ "HTML",
-        "JavaScript",
-        "Node.js",
-        "Next.js",
-        "React",
-        "TypeScript",
-        "パフォーマンス",
-        "Shopify",
-        "NewRelic",
-        "Docker",
-        "CI/CD",
-        "Git",
-        "Strapi",
-        "Jest",
-        "テスト",
-        "Database",
-        "AWS" ]
+    const allTags = tagMockData;
+
     return (
         <footer css={footerStyle}>
             <div css={divStyle}>
                 <section css={sectionCategoryStyle}>
                     <h2 css={categoryStyle}><TagIcon/>カテゴリー</h2>
 
-                    {allTags.map((tag, index) => {
+                    {allTags.map((tag, index, id) => {
                         return (
-                            <ul css={ulTagStyle} key={index}>
+                            <ul css={ulTagStyle} key={allTags[index].id}>
                                 <li css={liStyle}>
-                                    <TagButton label={allTags[index]} url={""} isHover={true}/>
+                                    <TagButton label={allTags[index].name} url={""} hoverAble={true}/>
                                 </li>
                             </ul>
                         )
@@ -116,7 +102,9 @@ const divStyle = css`
     gap: 48px 30px;
     margin: 0 auto;
     padding: 80px 0;
-    width: 95%;`
+    width: 95%;
+    max-width: 1000px;
+`
 
 const sectionCategoryStyle = css`
     grid-area: category;
