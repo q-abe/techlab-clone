@@ -1,32 +1,34 @@
 import React, { FC, useState } from "react";
 import { ArrowIcon } from "../atoms/symbols/ArrowIcon";
-import { css } from "@emotion/react";
+import { css, SerializedStyles } from "@emotion/react";
 import { ArticlesCountOfYear } from "../../entity/ArticlesCountByMonthType"
 
 type SAccordionProps = {
     articlesCount: ArticlesCountOfYear;
+    color: string;
+    cssColor: SerializedStyles;
 };
 
 export const Accordion: FC<SAccordionProps> = (props) => {
-    const { articlesCount } = props;
+    const { articlesCount, cssColor, color } = props;
     const [ isOpen, setIsOpen ] = useState(false)
-    console.log("articlesCount", articlesCount)
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
     }
 
+    const accordionHeaderStyles = accordionHeaderStyle(color)
 
     return (
         <dl css={dlStyle}>
             <dt css={accordionStyle} onClick={() => toggleAccordion()}>
-                <button css={accordionHeaderStyle}>
+                <button css={accordionHeaderStyles}>
                     {articlesCount.year}年
                     <ArrowIcon direction={isOpen ? "upward" : "downward"} css={arrowStyle}/>
                 </button>
             </dt>
             <dd css={isOpen ? contentOpenStyle : contentStyle}>
-                <ul css={listStyle}>
+                <ul css={ulStyle}>
                     {articlesCount.data.map((monthData) => {
                         const key = articlesCount.year + monthData.month
                         return (
@@ -42,6 +44,7 @@ export const Accordion: FC<SAccordionProps> = (props) => {
     )
 }
 
+
 const dlStyle = css`
     margin: 0;
     padding: 0;
@@ -54,7 +57,7 @@ const accordionStyle = css`
     vertical-align: top;
 `
 
-const accordionHeaderStyle = css`
+const accordionHeaderStyle = (color: string) => css`
     padding: 5px 10px;
     background: transparent;
     border: none;
@@ -67,6 +70,7 @@ const accordionHeaderStyle = css`
     position: relative;
     display: flex;
     justify-content: space-between;
+    color: ${color};
 
     :hover {
         transition: opacity .2s ease-in-out;
@@ -79,7 +83,7 @@ const arrowStyle = css`
     margin-top: 1px;
 `
 
-const listStyle = css`
+const ulStyle = css`
     max-width: 560px;
     margin: 0 0 0 3px;
     list-style: none;
@@ -90,12 +94,17 @@ const listStyle = css`
     font-size: 12px;
 `
 
+const linkStyle = css`
+    //配列で表記したいため空のまま残してます。
+`
+
 const contentStyle = css`
     margin: 0;
     overflow: hidden;
     max-height: 0;
     transition: max-height .100000s ease-in-out;
 `
+
 const contentOpenStyle = css`
     margin: 0;
     max-height: 200px;

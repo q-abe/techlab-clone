@@ -14,6 +14,14 @@ type FooterProps = {
 };
 
 const articlesCount = ArticlesCount;
+const cssColor = css`
+    color: #666666;
+
+    :hover {
+        transition: .2s opacity ease-in-out;
+        opacity: 0.7;
+    }
+`
 
 export const Footer: FC<FooterProps> = (props) => {
     const {} = props;
@@ -44,7 +52,7 @@ export const Footer: FC<FooterProps> = (props) => {
                         return (
                             <ul css={ulTagStyle} key={index}>
                                 <li css={liStyle}>
-                                    <TagButton label={allTags[index]} url={""}/>
+                                    <TagButton label={allTags[index]} url={""} isHover={true}/>
                                 </li>
                             </ul>
                         )
