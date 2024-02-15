@@ -37,39 +37,37 @@ export const Footer: FC<FooterProps> = (props) => {
     return (
         <footer css={footerStyle}>
             <div css={divStyle}>
-
-                <section>
+                <section css={section1Style}>
                     <h2 css={categoryStyle}><TagIcon/>カテゴリー</h2>
 
                     {allTags.map((tag, index) => {
                         return (
-                            <ul css={ulStyle} key={index}>
+                            <ul css={ulTagStyle} key={index}>
                                 <li css={liStyle}>
-                                    <TagButton css={tagButtonStyle} label={allTags[index]} url={""}/>
+                                    <TagButton label={allTags[index]} url={""}/>
                                 </li>
                             </ul>
                         )
                     })}
                 </section>
-
-                <section>
-                    <h2 css={archiveStyle}><CalendarIcon css={IconStyle}/>月別アーカイブ</h2>
-                    <MonthlyArchive articlesCount={articlesCount}/>
+                <section css={section2Style}>
+                    <h2 css={archiveStyle}><CalendarIcon/>月別アーカイブ</h2>
+                    <MonthlyArchive articlesCount={articlesCount} color={"#666666"} cssColor={cssColor}/>
                 </section>
-
-                <section>
+                <section css={section3Style}>
                     <h2 css={h2Style}>TechQLab(テックラボ)とは?</h2>
                     <p css={pStyle}>株式会社キューのWeb技術者によるWeb技術・ノウハウを発信するブログです。</p>
                 </section>
 
             </div>
         </footer>
-
     );
 };
 
 const footerStyle = css`
-    color: rgb(102, 102, 102);
+    color: #666666;
+    display: block;
+    width: 100%;
 `
 
 const divStyle = css`
@@ -78,38 +76,48 @@ const divStyle = css`
         "category archive"
         "copy archive";
     gap: 48px 30px;
+    margin: 0 auto;
+    padding: 80px 0;
+    width: 95%;`
+
+const section1Style = css`
+    grid-area: category;
+`
+
+const section2Style = css`
+    grid-area: archive;
+`
+
+const section3Style = css`
+    grid-area: copy;
+    border-top: 1px solid #666666;
+    padding: 24px 0 0;
 `
 
 const archiveStyle = css`
-    display: block;
-    margin-bottom: 10px;
     font-size: 18px;
+    display: flex;
+    gap: 10px;
+
 `
 
 const categoryStyle = css`
-    display: flex;
     margin-bottom: 10px;
     font-size: 18px;
     max-width: 500px;
+    display: flex;
+    gap: 10px;
 `
 
-const ulStyle = css`
+const ulTagStyle = css`
     margin: 0;
     padding: 0;
     display: inline-block;
-`
-
-const liStyle = css`
-    padding: 0 10px 0 0;
     list-style: none;
 `
 
-const IconStyle = css`
-
-`
-
-const tagButtonStyle = css`
-    display: block;
+const liStyle = css`
+    padding: 2px 5px;
 `
 
 const h2Style = css`
