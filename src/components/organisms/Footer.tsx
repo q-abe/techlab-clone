@@ -38,7 +38,7 @@ export const Footer: FC<FooterProps> = (props) => {
                         return (
                             <ul css={ulTagStyle} key={allTags[index].id}>
                                 <li css={liStyle}>
-                                    <TagButton label={allTags[index].name} url={""} hoverAble={true}/>
+                                    <TagButton label={allTags[index].name} url={""} hoverable={true}/>
                                 </li>
                             </ul>
                         )
