@@ -3,7 +3,7 @@ import React, { FC } from "react";
 export const CalendarIcon: FC<React.SVGProps<SVGElement>> = (props) => {
     const { onClick } = props
     return (
-        <svg width="32" height="29.128" viewBox="0 0 32 32.587" fill="#adadad">
+        <svg width="25" height="23" viewBox="0 0 32 32.587" fill="#adadad">
             <g id="グループ_253" data-name="グループ 253" transform="translate(-6.5 -6.206)">
                 <rect id="長方形_122" data-name="長方形 122" width="32" height="29.128"
                       transform="translate(6.5 9.665)"></rect>

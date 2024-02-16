@@ -1,6 +1,6 @@
 type ArticlesCountByMonthType = {
     month: number;
-    post_count: number;
+    postCount: number;
 }
 
 export type ArticlesCountOfYear = {

@@ -1,37 +1,40 @@
 import React, { FC, useState } from "react";
 import { ArrowIcon } from "../atoms/symbols/ArrowIcon";
-import { css } from "@emotion/react";
+import { css, SerializedStyles } from "@emotion/react";
 import { ArticlesCountOfYear } from "../../entity/ArticlesCountByMonthType"
 
-type SAccordionProps = {
+type AccordionProps = {
     articlesCount: ArticlesCountOfYear;
+    accordionHeaderColor: string;
+    accordionDescriptionColor: SerializedStyles;
 };
 
-export const Accordion: FC<SAccordionProps> = (props) => {
-    const { articlesCount } = props;
+export const Accordion: FC<AccordionProps> = (props) => {
+    const { articlesCount, accordionDescriptionColor, accordionHeaderColor } = props;
     const [ isOpen, setIsOpen ] = useState(false)
-    console.log("articlesCount", articlesCount)
 
     const toggleAccordion = () => {
         setIsOpen(!isOpen);
     }
 
+    const accordionHeaderStyles = accordionHeaderStyle(accordionHeaderColor);
 
     return (
         <dl css={dlStyle}>
             <dt css={accordionStyle} onClick={() => toggleAccordion()}>
-                <button css={accordionHeaderStyle}>
+                <button css={accordionHeaderStyles}>
                     {articlesCount.year}年
                     <ArrowIcon direction={isOpen ? "upward" : "downward"} css={arrowStyle}/>
                 </button>
             </dt>
             <dd css={isOpen ? contentOpenStyle : contentStyle}>
-                <ul css={listStyle}>
+                <ul css={ulStyle}>
                     {articlesCount.data.map((monthData) => {
                         const key = articlesCount.year + monthData.month
                         return (
                             <li key={key}>
-                                <a href={`/articles/?month=${articlesCount.year}-${monthData.month}`}>{monthData.month}月({monthData.post_count})</a>
+                                <a css={[ linkStyle, accordionDescriptionColor ]}
+                                   href={`/articles/?month=${articlesCount.year}-${monthData.month}`}>{monthData.month}月({monthData.postCount})</a>
                             </li>
                         )
                     })}
@@ -41,6 +44,7 @@ export const Accordion: FC<SAccordionProps> = (props) => {
     )
 }
 
+
 const dlStyle = css`
     margin: 0;
     padding: 0;
@@ -48,39 +52,38 @@ const dlStyle = css`
 
 const accordionStyle = css`
     border-bottom: 1px solid #707070;
-    width: 560px;
-    margin: 0;
-    padding: 0;
+    width: 100%;
     display: inline-block;
     vertical-align: top;
 `
 
-const accordionHeaderStyle = css`
-    margin: 0;
+const accordionHeaderStyle = (color: string) => css`
     padding: 5px 10px;
     background: transparent;
     border: none;
-    width: 560px;
-    height: 37px;
+    width: 100%;
     text-align: left;
     font-weight: bold;
     cursor: pointer;
     font-size: 14px;
     align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    color: ${color};
 
     :hover {
         transition: opacity .2s ease-in-out;
         opacity: 0.7;
-    }
+        }
 `
 
 const arrowStyle = css`
-    float: right;
     margin-right: 5px;
     margin-top: 1px;
 `
 
-const listStyle = css`
+const ulStyle = css`
     max-width: 560px;
     margin: 0 0 0 3px;
     list-style: none;
@@ -91,12 +94,17 @@ const listStyle = css`
     font-size: 12px;
 `
 
+const linkStyle = css`
+    //配列で表記したいため空のまま残してます。
+`
+
 const contentStyle = css`
     margin: 0;
     overflow: hidden;
     max-height: 0;
     transition: max-height .100000s ease-in-out;
 `
+
 const contentOpenStyle = css`
     margin: 0;
     max-height: 200px;
