@@ -44,14 +44,13 @@ const dateStyle = css`
     margin: 0;
     display: flex;
 
-
     :after {
         content: "";
         width: 54%;
         height: 1px;
         margin: 0 0 0 1rem;
         background-color: #ADADAD;
-    }
+        }
 `
 
 const titleStyle = css`

@@ -18,12 +18,12 @@ export const Header: FC<HeaderProps> = (props) => {
     }
 
     return (
-        <header>
-            <nav>
+        <header css={headerStyle}>
+            <nav css={gridContainer}>
                 <ul css={ulStyle}>
-                    <li></li>
+                    <li css={blankStyle}></li>
                     <li>
-                        <QTextLogo/>
+                        <QTextLogo css={textLogoStyle}/>
                     </li>
                     <li>
                         <SearchIcon css={searchStyle} onClick={handleModal}/>
@@ -37,25 +37,49 @@ export const Header: FC<HeaderProps> = (props) => {
                 </div>
             </aside>
         </header>
-
-
     );
 };
+
+const headerStyle = css`
+    //width: 100%;
+`
+const gridContainer = css`
+    //display: flex;
+    //width: 100%;
+`
 
 const ulStyle = css`
     list-style: none;
     cursor: pointer;
-    width: 95%;
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "blank textLogo searchIcon";
     justify-content: space-between;
-    margin-top: 5px;
+    margin-top: 20px;
+    padding: 0px;
+`
+
+const blankStyle = css`
+    grid-area: blank;
+    width: 40px;
+`
+
+const textLogoStyle = css`
+    grid-area: textLogo;
+    //place-content: center;
+    //justify-items: center;
+    //place-items: center;
 `
 
 const searchStyle = css`
+    grid-area: searchIcon;
+    padding-right: 20px;
+
     :hover {
         opacity: 0.7;
         transition: .2s opacity ease-in-out;
-    }
+        }
 `
 
 const overlayVisible = css`

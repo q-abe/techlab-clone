@@ -23,13 +23,13 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
                                             title={title}/>
                 </a>
             </li>
-
         </ul>
     );
 };
 
 const ulStyle = css`
     list-style: none;
+    padding: 0;
 `
 
 const a = css`
