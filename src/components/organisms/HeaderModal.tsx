@@ -86,10 +86,12 @@ const closeStyle = css`
 `
 
 const searchStyle = css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    max-width: 640px;
 
+    @media screen and (max-width: 750px) {
+        max-width: 80%;
+        }
 `
 
 const tagsStyle = css`
@@ -104,12 +106,26 @@ const ulStyle = css`
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    font-size: 16px;
     max-width: 640px;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0 0 0;
+
+    @media screen and (max-width: 750px) {
+        line-height: 3;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 12px;
+        max-width: 80%;
+        }
 `
 
 const tagStyle = css`
     color: white;
-    padding-left: 15px;
+    padding-right: 15px;
 
     :hover {
         opacity: 0.7;
