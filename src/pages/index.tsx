@@ -1,12 +1,10 @@
 import React from "react";
+import { Home } from '@/components/template/Home'
 
-import { ArticleThumbnail } from "@/components/atoms/symbols/ArticleThumbnail";
-
-export default function Home() {
+export default function index() {
     return (
         <div>
-            <ArticleThumbnail/>
-            <p>文字</p>
+            <Home/>
         </div>
     );
 }
