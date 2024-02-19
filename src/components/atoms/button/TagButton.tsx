@@ -11,10 +11,15 @@ export const TagButton: FC<TagButtonProps> = (props) => {
     const { url, label, hoverable } = props;
 
     return (
-        <a href={url} css={hoverable ? [ tagStyle, tagHover ] : tagStyle}>
-            {label}
-        </a>
-    );
+        <>
+            {hoverable ? (<a href={url} css={hoverable ? [ tagStyle, tagHover ] : tagStyle}>
+                {label}
+            </a>) : (<span css={hoverable ? [ tagStyle, tagHover ] : tagStyle}>
+                {label}
+            </span>
+            )}
+        </>
+    )
 };
 
 const tagStyle = css`
