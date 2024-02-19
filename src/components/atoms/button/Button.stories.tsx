@@ -1,15 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react";
-
 import { Button } from "./Button";
 
 const meta = {
     title: "atoms/Button",
     component: Button,
     parameters: {
-        layout: "centered",
+        layout: "centered"
     },
-    tags: ["autodocs"],
-    argTypes: {},
+    tags: [ "autodocs" ],
+    argTypes: {}
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -22,7 +21,7 @@ export const Primary: Story = {
         label: "全記事一覧",
         onClick: () => {
         }
-    },
+    }
 };
 
 export const Secondary: Story = {
@@ -30,5 +29,5 @@ export const Secondary: Story = {
         label: "シリーズ連載一覧",
         onClick: () => {
         }
-    },
+    }
 };
