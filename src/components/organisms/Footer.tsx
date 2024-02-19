@@ -103,6 +103,13 @@ const divStyle = css`
     padding: 80px 0;
     width: 95%;
     max-width: 1000px;
+
+    @media screen and (max-width: 640px) {
+        grid-template-areas:
+        "category"
+        "copy"
+        "archive";
+        }
 `
 
 const sectionCategoryStyle = css`
