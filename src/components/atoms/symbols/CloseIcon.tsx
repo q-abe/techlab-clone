@@ -8,7 +8,7 @@ type CloseProps = {
 const crossButton = css`
     cursor: pointer;
     position: absolute;
-    right: 60px;
+    right: 68px;
     top: 24px;
     display: block;
     padding: 0;
@@ -32,7 +32,7 @@ const crossButton = css`
         border-left: 1px solid #FFFFFF;
         transform-origin: left top;
         transform: rotate(-45deg);
-    }
+        }
 
     ::after {
         content: "";
@@ -45,7 +45,7 @@ const crossButton = css`
         border-right: 1px solid #FFFFFF;
         transform-origin: right top;
         transform: rotate(45deg);
-    }
+        }
 `
 
 export const CloseIcon: FC<CloseProps> = (props) => {
