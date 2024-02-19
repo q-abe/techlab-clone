@@ -23,7 +23,9 @@ export const Header: FC<HeaderProps> = (props) => {
                 <ul css={ulStyle}>
                     <li css={blankStyle}></li>
                     <li>
-                        <QTextLogo css={textLogoStyle}/>
+                        <a href={"http://localhost:3000/"}>
+                            <QTextLogo css={textLogoStyle}/>
+                        </a>
                     </li>
                     <li>
                         <SearchIcon css={searchStyle} onClick={handleModal}/>
