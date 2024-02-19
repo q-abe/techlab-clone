@@ -58,6 +58,7 @@ const modalVisible = css`
 `;
 
 const modalHidden = css`
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -81,7 +82,7 @@ const closeStyle = css`
     :hover {
         opacity: 0.7;
         transition: .2s opacity ease-in-out;
-    }
+        }
 `
 
 const searchStyle = css`
@@ -113,5 +114,5 @@ const tagStyle = css`
     :hover {
         opacity: 0.7;
         transition: .2s opacity ease-in-out;
-    }
+        }
 `
