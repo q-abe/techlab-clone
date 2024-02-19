@@ -18,8 +18,8 @@ export const Header: FC<HeaderProps> = (props) => {
     }
 
     return (
-        <header css={headerStyle}>
-            <nav css={gridContainer}>
+        <header>
+            <nav>
                 <ul css={ulStyle}>
                     <li css={blankStyle}></li>
                     <li>
@@ -40,14 +40,6 @@ export const Header: FC<HeaderProps> = (props) => {
     );
 };
 
-const headerStyle = css`
-    //width: 100%;
-`
-const gridContainer = css`
-    //display: flex;
-    //width: 100%;
-`
-
 const ulStyle = css`
     list-style: none;
     cursor: pointer;
@@ -67,9 +59,6 @@ const blankStyle = css`
 
 const textLogoStyle = css`
     grid-area: textLogo;
-    //place-content: center;
-    //justify-items: center;
-    //place-items: center;
 `
 
 const searchStyle = css`
