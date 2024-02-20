@@ -29,7 +29,6 @@ export const ArticleCardDescription: FC<ArticleCardProps> = (props) => {
 };
 
 const detailStyle = css`
-    width: 300px;
     min-height: 126px;
     background-color: #F5F5F5;
 `

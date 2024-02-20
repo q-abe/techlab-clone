@@ -57,11 +57,12 @@ const ulStyle = css`
     grid-template-columns: repeat(3, 300px);
 
     @media screen and (max-width: 1050px) {
-        grid-template-columns: repeat(2, minmax(0px, 1fr));
+        grid-template-columns: repeat(2, 300px);
         }
 
     @media screen and (max-width: 640px) {
-        grid-template-columns: repeat(1, minmax(300px, auto) 1fr);
+        grid-template-columns: repeat(1, minmax(0px, 640px));
+        margin: 0 20px;
         }
 `
 

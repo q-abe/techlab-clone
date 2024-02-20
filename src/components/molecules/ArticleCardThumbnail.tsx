@@ -20,17 +20,14 @@ export const ArticleCardThumbnail: FC<ArticleCardProps> = (props) => {
 };
 
 const pictureStyle = css`
-    width: 300px;
     height: 168px;
-    // 701 * 336　レスポンシブ時の大きさ
     margin: 0;
     padding: 0;
     position: relative;
 `
 
 const textStyle = css`
-    width: 300px;
-    height: 84px;
+    min-height: 84px;
     position: absolute;
     top: 40%;
     left: 50%;
