@@ -112,6 +112,7 @@ const ulStyle = css`
     align-items: center;
     margin: 0;
     padding: 20px 0 0 0;
+    gap: 0 8px;
 
     @media screen and (max-width: 750px) {
         line-height: 3;
@@ -125,7 +126,6 @@ const ulStyle = css`
 
 const tagStyle = css`
     color: white;
-    padding-right: 15px;
 
     :hover {
         opacity: 0.7;
