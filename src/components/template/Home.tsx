@@ -61,7 +61,7 @@ const ulStyle = css`
         }
 
     @media screen and (max-width: 640px) {
-        grid-template-columns: repeat(1, minmax(0px, 1fr));
+        grid-template-columns: repeat(1, minmax(300px, auto) 1fr);
         }
 `
 
