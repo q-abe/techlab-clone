@@ -20,7 +20,6 @@ export const ArticleCardThumbnail: FC<ArticleCardProps> = (props) => {
 };
 
 const pictureStyle = css`
-    height: 168px;
     margin: 0;
     padding: 0;
     position: relative;
