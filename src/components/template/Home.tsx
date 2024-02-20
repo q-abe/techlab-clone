@@ -7,6 +7,7 @@ import ArticlesCountMockData from "../../api/ArticlesCountMockData.json"
 import tagMockData from "../../api/TagMockData.json"
 import ArticlesMockDate from "../../api/ArticlesMockData.json"
 import { css } from '@emotion/react'
+import { Button } from '../atoms/button/Button'
 
 export const Home: FC = (props) => {
     console.log("Home");
@@ -27,6 +28,11 @@ export const Home: FC = (props) => {
                         })}
                     </ul>
                 </div>
+                <div css={buttonStyle}>
+                    <Button label={"全記事一覧"} onClick={() => {
+                    }}/>
+                </div>
+                <div css={seriesStyle}></div>
                 <Footer allTags={tagMockData} articlesCount={ArticlesCountMockData}/>
             </main>
         </div>
@@ -70,4 +76,16 @@ const liStyle = css`
     list-style: none;
     margin: 0;
     padding: 0;
+`
+const buttonStyle = css`
+    display: flex;
+    justify-content: center;
+    padding: 56px 0 80px;
+`
+
+const seriesStyle = css`
+    width: 100%;
+    height: 710px;
+    background-color: #F5F5F5;
+    padding: 80px 0;
 `
