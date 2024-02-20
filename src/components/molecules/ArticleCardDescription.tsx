@@ -38,13 +38,13 @@ const dateStyle = css`
     color: #666666;
     padding: 1rem 1rem 0 1rem;
     align-items: center;
-    justify-content: center;
     margin: 0;
     display: flex;
+    white-space: nowrap;
 
     :after {
         content: "";
-        width: 54%;
+        width: 100%;
         height: 1px;
         margin: 0 0 0 1rem;
         background-color: #ADADAD;
