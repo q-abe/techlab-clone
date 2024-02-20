@@ -69,6 +69,7 @@ const ulStyle = css`
     @media screen and (max-width: 640px) {
         grid-template-columns: repeat(1, minmax(0px, 640px));
         margin: 0 20px;
+        font-size: 5.5vw;
         }
 `
 
