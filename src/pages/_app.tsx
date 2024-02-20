@@ -13,6 +13,7 @@ export default function App({ Component, pageProps }: AppProps) {
             min-height: 100vh;
             text-rendering: optimizeSpeed;
             line-height: 1.5;
+            margin: 0;
             }
 
     ,
