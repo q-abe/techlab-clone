@@ -32,7 +32,6 @@ const detailStyle = css`
     width: 300px;
     min-height: 126px;
     background-color: #F5F5F5;
-    padding-bottom: 30px;
 `
 
 const dateStyle = css`
@@ -64,9 +63,8 @@ const titleStyle = css`
 
 const tagStyle = css`
     display: flex;
-    display: -webkit-flex;
     list-style: none;
-    padding: 0 0 0 16px;
+    padding: 0 0 30px 16px;
     flex-wrap: wrap;
     gap: 10px;
 `
