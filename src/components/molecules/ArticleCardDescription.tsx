@@ -16,11 +16,10 @@ export const ArticleCardDescription: FC<ArticleCardProps> = (props) => {
             <p css={dateStyle}>{dateCreated}</p>
             <h2 css={titleStyle}>{title}</h2>
             <ul css={tagStyle}>
-
                 {tags.map((tag, index) => (
-                    <li css={liStyle} key={tag}>
+                    <li key={tag}>
                     <span>
-                    <TagButton label={tags[index]} url={""} hoverAble={false}/>
+                    <TagButton label={tags[index]} url={""} hoverable={false}/>
                     </span>
                     </li>
                 ))}
@@ -30,8 +29,7 @@ export const ArticleCardDescription: FC<ArticleCardProps> = (props) => {
 };
 
 const detailStyle = css`
-    width: 300px;
-    height: 156px;
+    min-height: 126px;
     background-color: #F5F5F5;
 `
 
@@ -40,18 +38,17 @@ const dateStyle = css`
     color: #666666;
     padding: 1rem 1rem 0 1rem;
     align-items: center;
-    justify-content: center;
     margin: 0;
     display: flex;
-
+    white-space: nowrap;
 
     :after {
         content: "";
-        width: 54%;
+        width: 100%;
         height: 1px;
         margin: 0 0 0 1rem;
         background-color: #ADADAD;
-    }
+        }
 `
 
 const titleStyle = css`
@@ -61,18 +58,12 @@ const titleStyle = css`
     overflow: hidden;
     color: #333333;
     font-size: 16px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
 `
 
 const tagStyle = css`
     display: flex;
-    display: -webkit-flex;
     list-style: none;
-    padding: 6px 0 0 16px;
-`
-
-const liStyle = css`
-    margin-right: 10px;
+    padding: 0 0 30px 16px;
+    flex-wrap: wrap;
+    gap: 10px;
 `

@@ -7,11 +7,11 @@ import { ArticlesCounts } from "../../entity/ArticlesCountByMonthType";
 import ArticlesCount from "../../api/ArticlesCountMockData.json";
 import { CalendarIcon } from "../atoms/symbols/CalendarIcon";
 import { QImageLogo } from "../atoms/symbols/QImageLogo";
-import tagMockData from "../../api/TagMockData.json"
+import { Tags } from "../../entity/TagType";
 
 type FooterProps = {
     articlesCount: ArticlesCounts;
-    allTags: string[]
+    allTags: Tags
 };
 
 const articlesCount = ArticlesCount;
@@ -21,12 +21,11 @@ const cssColor = css`
     :hover {
         transition: .2s opacity ease-in-out;
         opacity: 0.7;
-    }
+        }
 `
 
 export const Footer: FC<FooterProps> = (props) => {
-    const {} = props;
-    const allTags = tagMockData;
+    const { allTags } = props;
 
     return (
         <footer css={footerStyle}>
@@ -38,7 +37,7 @@ export const Footer: FC<FooterProps> = (props) => {
                         return (
                             <ul css={ulTagStyle} key={allTags[index].id}>
                                 <li css={liStyle}>
-                                    <TagButton label={allTags[index].name} url={""} hoverAble={true}/>
+                                    <TagButton label={allTags[index].name} url={""} hoverable={true}/>
                                 </li>
                             </ul>
                         )
@@ -104,6 +103,13 @@ const divStyle = css`
     padding: 80px 0;
     width: 95%;
     max-width: 1000px;
+
+    @media screen and (max-width: 640px) {
+        grid-template-areas:
+        "category"
+        "copy"
+        "archive";
+        }
 `
 
 const sectionCategoryStyle = css`
@@ -186,7 +192,7 @@ const footerMenuStyle = css`
     :hover {
         transition: .2s opacity ease-in-out;
         opacity: 0.7;
-    }
+        }
 `
 
 const underStyle = css`
@@ -214,5 +220,5 @@ const footerPrivacyStyle = css`
     :hover {
         transition: .2s opacity ease-in-out;
         opacity: 0.7;
-    }
+        }
 `

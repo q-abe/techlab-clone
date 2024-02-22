@@ -58,6 +58,7 @@ const modalVisible = css`
 `;
 
 const modalHidden = css`
+    z-index: 2;
     position: fixed;
     top: 0;
     left: 0;
@@ -81,14 +82,16 @@ const closeStyle = css`
     :hover {
         opacity: 0.7;
         transition: .2s opacity ease-in-out;
-    }
+        }
 `
 
 const searchStyle = css`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    max-width: 640px;
 
+    @media screen and (max-width: 750px) {
+        max-width: 80%;
+        }
 `
 
 const tagsStyle = css`
@@ -103,15 +106,29 @@ const ulStyle = css`
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    font-size: 16px;
     max-width: 640px;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px 0 0 0;
+    gap: 0 8px;
+
+    @media screen and (max-width: 750px) {
+        line-height: 3;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 12px;
+        max-width: 80%;
+        }
 `
 
 const tagStyle = css`
     color: white;
-    padding-left: 15px;
 
     :hover {
         opacity: 0.7;
         transition: .2s opacity ease-in-out;
-    }
+        }
 `

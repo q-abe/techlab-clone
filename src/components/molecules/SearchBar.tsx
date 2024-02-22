@@ -8,7 +8,6 @@ type SearchProps = {
 
 const formStyle = css`
     display: flex;
-    max-width: 640px;
     border-bottom: 2px solid #FFFFFF;
     color: #FFFFFF;
     width: 100%;
@@ -35,7 +34,7 @@ const buttonStyle = css`
     :hover {
         transition: opacity .2s ease-in-out;
         opacity: 0.7;
-    }
+        }
 `
 
 export const SearchBar: FC<SearchProps> = (props) => {

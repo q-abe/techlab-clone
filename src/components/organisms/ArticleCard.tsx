@@ -14,24 +14,37 @@ export const ArticleCard: FC<ArticleCardProps> = (props) => {
     const { id, date, tags, title } = props;
     return (
         <ul css={ulStyle}>
-            <li>
-                <a href={`${id}`} css={a}>
-                    <ArticleCardThumbnail articleTitle={title}
-                                          index={id}/>
-                    <ArticleCardDescription dateCreated={date}
-                                            tags={tags}
-                                            title={title}/>
+            <li css={liStyle}>
+                <a href={`${id}`} css={aStyle}>
+                    <div css={gridStyle}>
+                        <ArticleCardThumbnail articleTitle={title}
+                                              index={id}/>
+                        <ArticleCardDescription dateCreated={date}
+                                                tags={tags}
+                                                title={title}/>
+                    </div>
                 </a>
             </li>
-
         </ul>
     );
 };
 
 const ulStyle = css`
     list-style: none;
+    padding: 0;
+    height: 100%;
 `
 
-const a = css`
+const liStyle = css`
+    height: 100%;
+`
+
+const aStyle = css`
     text-decoration: none;
+`
+
+const gridStyle = css`
+    display: grid;
+    height: 100%;
+    grid-template-rows: minmax(50px, auto) 1fr;
 `

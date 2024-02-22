@@ -4,17 +4,22 @@ import React, { FC } from "react";
 type TagButtonProps = {
     url: string;
     label: string;
-    hoverAble: boolean;
+    hoverable: boolean;
 };
 
 export const TagButton: FC<TagButtonProps> = (props) => {
-    const { url, label, hoverAble } = props;
+    const { url, label, hoverable } = props;
 
     return (
-        <a href={url} css={hoverAble ? [ tagStyle, tagHover ] : tagStyle}>
-            {label}
-        </a>
-    );
+        <>
+            {hoverable ? (<a href={url} css={hoverable ? [ tagStyle, tagHover ] : tagStyle}>
+                {label}
+            </a>) : (<span css={hoverable ? [ tagStyle, tagHover ] : tagStyle}>
+                {label}
+            </span>
+            )}
+        </>
+    )
 };
 
 const tagStyle = css`
@@ -33,5 +38,5 @@ const tagHover = css`
         background: #FFFFFF;
         color: #999999;
         transition: .3s all ease;
-    }
+        }
 `
